@@ -7,7 +7,6 @@ class MainScreen extends Component {
   render() {
     return (
       <Container fluid className='main-screen'>
-        
         <div className='main-title'>
           <h1>Everything You Love About Coffee</h1>
           <img src={beans} alt='coffee-title'/>
