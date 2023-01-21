@@ -1,20 +1,28 @@
 .main-screen {
-  width: 1440px;
-  height: 640px;
-  border-radius: 0px;
+  height: 100vh;
   position: absolute;
-  background: url(../../img/main_bg.jpg);
+  overflow: auto;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  /* filter: brightness(0.5)*/
-} 
+}
 
-
+.main-screen::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/main_bg.jpg);
+  filter: blur(5px);
+}
 
 .main-title {
   margin-top: 200px;
   color: #FFF;
   transform: scaleX(-1);
-  font-family: 'Merienda';
   font-style: normal;
   font-weight: 400;
   font-size: 44px;
@@ -23,7 +31,6 @@
 
 .main-subtitle {
   color: #FFF;
-  font-family: 'Merienda';
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
@@ -31,7 +38,6 @@
 
 .main-btn {
   color: #FFF;
-  font-family: 'Merienda';
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
