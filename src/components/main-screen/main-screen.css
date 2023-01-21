@@ -1,0 +1,42 @@
+.main-screen {
+  width: 1440px;
+  height: 640px;
+  border-radius: 0px;
+  position: absolute;
+  background: url(../../img/main_bg.jpg);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  /* filter: brightness(0.5)*/
+} 
+
+
+
+.main-title {
+  margin-top: 200px;
+  color: #FFF;
+  transform: scaleX(-1);
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  filter: none;
+}
+
+.main-subtitle {
+  color: #FFF;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.main-btn {
+  color: #FFF;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  background:none;
+  border: 1px solid #FFFFFF;
+  width: 120px;
+  height: 30px;
+}
