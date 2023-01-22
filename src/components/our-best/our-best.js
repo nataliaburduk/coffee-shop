@@ -1,4 +1,3 @@
-
 import Container from 'react-bootstrap/Container';
 import './our-best.css'
 import '../our-best-card/our-best-card.css'
@@ -7,9 +6,11 @@ import Row from 'react-bootstrap/Row';
 
 const OurBest = ({data}) => {
   const elements = data.map(item => {
-    const {...itemProps} = item;
+    const {id, ...itemProps} = item;
       return (
               <OurBestCard 
+              id={id}
+              key={id}
               {...itemProps}
               />
       ) 

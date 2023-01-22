@@ -1,32 +1,36 @@
+import { Component } from 'react';
 import './nav-bar.css'
-import coffeeBeans from '../../img/coffee-beans.svg'
 
+class Navbar extends Component{
+  constructor(props) {
+    super(props);
 
-const Navbar = () => {
-  return (
-    <nav className="coffee-navbar">
-      <div className="navbar-container">
-        <img src={coffeeBeans} alt='coffee-logo'className='coffee-logo'/>
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <a href="/" className="nav-link">
-              Coffee house
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/" className="nav-link">
-              Our coffee
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/" className="nav-link">
-              For your pleasure
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  )
+  }
+  render() {
+    const {navBarType, coffeeLogo} = this.props
+    return (
+      <nav className={navBarType}>
+          <img src={coffeeLogo} alt='coffee-logo'className='coffee-logo'/>
+          <ul className="nav-menu">
+            <li className="nav-item">
+              <a href="/" className="nav-link">
+                Coffee house
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">
+                Our coffee
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/" className="nav-link">
+                For your pleasure
+              </a>
+            </li>
+          </ul>
+      </nav>
+    )
+  }
 }
 
 export default Navbar;
