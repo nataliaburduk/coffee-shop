@@ -1,8 +1,11 @@
 .main-screen {
-  height: 70vh;
-  position: absolute;
+  height: 100vh;
+  position: static;
   overflow: auto;
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-screen::before {
@@ -20,29 +23,25 @@
 }
 
 .main-title {
-  margin-top: 200px;
   color: #FFF;
   transform: scaleX(-1);
-  font-style: normal;
   font-weight: 400;
   font-size: 40px;
-  filter: none;
 }
 
 .main-subtitle {
   color: #FFF;
-  font-style: normal;
   font-weight: 300;
   font-size: 24px;
 }
 
 .main-btn {
   color: #FFF;
-  font-style: normal;
   font-weight: 300;
   font-size: 14px;
   background:none;
   border: 1px solid #FFFFFF;
+  border-radius: 3px;
   width: 120px;
   height: 30px;
 }

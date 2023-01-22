@@ -4,13 +4,12 @@ import MainScreen from '../main-screen/main-screen';
 import Navbar from '../nav-bar/nav-bar';
 import AboutUs from '../about-us/about-us';
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <MainScreen/>
         <Navbar/>
+        <MainScreen/>
         <AboutUs/>
       </div>
     )
@@ -18,4 +17,3 @@ class App extends Component {
 }
 
 export default App;
-

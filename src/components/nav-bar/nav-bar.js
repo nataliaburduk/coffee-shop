@@ -1,11 +1,10 @@
-// import { Component } from "react";
 import './nav-bar.css'
 import coffeeBeans from '../../img/coffee-beans.svg'
 
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="coffee-navbar">
       <div className="navbar-container">
         <img src={coffeeBeans} alt='coffee-logo'className='coffee-logo'/>
         <ul className="nav-menu">

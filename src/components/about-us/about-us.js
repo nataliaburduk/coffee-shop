@@ -5,10 +5,10 @@ import './about-us.css'
 class AboutUs extends Component {
   render() {
     return (
-      <div className='about-title'>
-          <p>About Us</p>
-          <img src={darkBeans} alt='coffee-title'/>
-          <div className="about-content">
+      <div className='about-us-container'>
+        <p>About Us</p>
+        <img src={darkBeans} alt='coffee-title'/>
+        <div className="about-content">
           <p className='about-p1'>
             Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
             Afraid at highly months do things on at. Situation recommend objection do intention
@@ -23,7 +23,7 @@ class AboutUs extends Component {
             recommend. Did even but nor are most gave hope. Secure active living depend son
             repair day ladies now.
           </p>
-          </div>
+        </div>
       </div>
     ) 
   }
