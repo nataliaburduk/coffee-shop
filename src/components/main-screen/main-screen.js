@@ -8,10 +8,10 @@ class MainScreen extends Component {
     return (
       <Container fluid className='main-screen'>
         <div className='main-title'>
-          <h1>Everything You Love About Coffee</h1>
+          <p>Everything You Love About Coffee</p>
           <img src={beans} alt='coffee-title'/>
-          <h2 className='main-subtitle'>We makes every day full of energy and taste</h2>
-          <h2 className='main-subtitle'>Want to try our beans?</h2>
+          <p className='main-subtitle'>We makes every day full of energy and taste</p>
+          <p className='main-subtitle'>Want to try our beans?</p>
           <button className='main-btn'>More</button>
         </div>
       </Container>
