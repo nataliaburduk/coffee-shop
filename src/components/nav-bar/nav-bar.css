@@ -3,18 +3,12 @@
   display: flex;
   background-color: transparent; 
   justify-content:space-between;
-  align-items: center;
+  align-items: flex-start;
   top: 0;
-}
-
-.navbar-container {
+  color: #FFFFFF;
   z-index: 1;
   margin-top: 30px;
   margin-left: 148px;
-  display: flex;
-  justify-content:flex-start;
-  color: #FFFFFF;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
   
 .nav-menu {
@@ -32,10 +26,20 @@
   position: relative;
   font-weight: 400;
   font-size: 14px;
-  color: #FFFFFF;
 }
 
 .coffee-logo {
   position: relative;
   height: 35px;
+}
+
+.coffee-footer {
+  position: static;
+  display: flex;
+  background-color: transparent; 
+  justify-content:center;
+  align-items: flex-start;
+  top: 0;
+  color: black;
+  width: 100%;
 }
