@@ -1,0 +1,10 @@
+.our-coffee-cards {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: auto !important;
+}
+
+
