@@ -1,11 +1,9 @@
 import { Component } from 'react';
 import './nav-bar.css'
 
-class Navbar extends Component{
-  constructor(props) {
-    super(props);
+import {Link} from "react-router-dom";
 
-  }
+class Navbar extends Component{
   render() {
     const {navBarType, coffeeLogo} = this.props
     return (
@@ -13,19 +11,19 @@ class Navbar extends Component{
           <img src={coffeeLogo} alt='coffee-logo'className='coffee-logo'/>
           <ul className="nav-menu">
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 Coffee house
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <Link to="/our-coffee" className="nav-link">
                 Our coffee
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 For your pleasure
-              </a>
+              </Link>
             </li>
           </ul>
       </nav>
