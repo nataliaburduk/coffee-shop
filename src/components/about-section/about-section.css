@@ -1,0 +1,17 @@
+.about-section-container {
+  width: 60% !important;
+}
+
+.about-section-content {
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+.about-section-title {
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+
+.about-section-img img {
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
