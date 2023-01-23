@@ -1,7 +1,5 @@
-import { Component } from "react";
-import darkBeans from '../../img/dark-beans.svg';
-import './about-us.css';
 import AboutSection from "../about-section/about-section";
+import './about-us.css';
 
 class AboutUs extends AboutSection {
   sectionTitle() {
