@@ -2,6 +2,7 @@ import {Component} from 'react';
 import Navbar from '../nav-bar/nav-bar';
 import OurCoffeeHeader from '../our-coffee-header/our-coffee-header';
 import OurCoffeeAbout from '../our-coffee-about/our-coffee-about';
+import Separator from '../separator/separator';
 import SearchFilterPanel from '../search-filter-form/search-filter-form';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
@@ -31,6 +32,7 @@ class OurCoffeeMain extends Component {
       <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
       <OurCoffeeHeader/>
       <OurCoffeeAbout/>
+      <Separator/>
       <SearchFilterPanel/>
       <OurCoffeeCards filterData={filterData}/>
       <Footer/>

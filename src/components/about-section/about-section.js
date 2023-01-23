@@ -15,7 +15,7 @@ class AboutSection extends Component {
     const img = this.sectionImage();
     if (img) {
       return (
-        <Col className="our-coffee-about-col">
+        <Col className="about-section-img">
           {img}
         </Col>
       )
@@ -24,15 +24,17 @@ class AboutSection extends Component {
 
   render() {
     return (
-      <Container className="our-coffee-about-container">
-        <Row>
+      <Container className="about-section-container">
+        <Row className="justify-content-center">
           {this.imageCol()}
-          <Col className="our-coffee-about-col">
-            <div>
+          <Col className="about-section-body">
+            <div className="about-section-title">
               {this.sectionTitle()}
+            </div>
+            <div>
               <img src={darkBeans} alt='coffee-title'/>
             </div>
-            <div className="our-coffee-about-content">
+            <div className="about-section-content">
               { this.sectionBody() }
             </div>
           </Col>
