@@ -29,12 +29,12 @@ class PleasureMain extends Component {
     const {coffeeCardsData} = this.state;
     return (
       <div className='for-your-pleasure-page'>
-      <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
-      <PleasureHeader/>
-      <PleasureAbout/>
-      <Separator/>
-      <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
-      <Footer/>
+        <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
+        <PleasureHeader/>
+        <PleasureAbout/>
+        <Separator/>
+        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+        <Footer/>
       </div>
     )
   }
