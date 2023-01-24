@@ -1,0 +1,9 @@
+.for-your-pleasure-page {
+  text-align: center;
+  font-family: 'Merienda';
+}
+
+.for-your-pleasure-page .about-section-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

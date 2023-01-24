@@ -1,17 +1,16 @@
 import {Component} from 'react';
 import Navbar from '../nav-bar/nav-bar';
-import OurCoffeeHeader from '../our-coffee-header/our-coffee-header';
-import OurCoffeeAbout from '../our-coffee-about/our-coffee-about';
+import PleasureHeader from '../pleasure-header/pleasure-header';
+import PleasureAbout from '../pleasure-about/pleasure-about';
 import Separator from '../separator/separator';
-import SearchFilterPanel from '../search-filter-form/search-filter-form';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
 
 import firstImg from '../../img/first_card.jpg';
 import coffeeBeans from '../../img/coffee-beans.svg'
-import './our-coffee-main.css';
+import './pleasure-main.css';
 
-class OurCoffeeMain extends Component {
+class PleasureMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,20 +24,20 @@ class OurCoffeeMain extends Component {
       ]
     }
   }
+
   render() {
     const {coffeeCardsData} = this.state;
     return (
-      <div className='our-coffee-page'>
-      <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
-      <OurCoffeeHeader/>
-      <OurCoffeeAbout/>
-      <Separator/>
-      <SearchFilterPanel/>
-      <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
-      <Footer/>
+      <div className='for-your-pleasure-page'>
+        <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
+        <PleasureHeader/>
+        <PleasureAbout/>
+        <Separator/>
+        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+        <Footer/>
       </div>
     )
   }
 }
 
-export default OurCoffeeMain;
+export default PleasureMain;
