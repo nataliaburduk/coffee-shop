@@ -1,6 +1,6 @@
 import {Component} from 'react';
 import Navbar from '../nav-bar/nav-bar';
-import PleasureHeader from '../pleasure-header/pleasure-header';
+import Header from '../header/header';
 import PleasureAbout from '../pleasure-about/pleasure-about';
 import Separator from '../separator/separator';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
@@ -30,7 +30,7 @@ class PleasureMain extends Component {
     return (
       <div className='for-your-pleasure-page'>
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
-        <PleasureHeader/>
+        <Header title='For Your Pleasure'/>
         <PleasureAbout/>
         <Separator/>
         <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>

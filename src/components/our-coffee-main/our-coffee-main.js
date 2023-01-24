@@ -1,6 +1,6 @@
 import {Component} from 'react';
 import Navbar from '../nav-bar/nav-bar';
-import OurCoffeeHeader from '../our-coffee-header/our-coffee-header';
+import Header from '../header/header';
 import OurCoffeeAbout from '../our-coffee-about/our-coffee-about';
 import Separator from '../separator/separator';
 import SearchFilterPanel from '../search-filter-form/search-filter-form';
@@ -27,15 +27,16 @@ class OurCoffeeMain extends Component {
   }
   render() {
     const {coffeeCardsData} = this.state;
+
     return (
       <div className='our-coffee-page'>
-      <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
-      <OurCoffeeHeader/>
-      <OurCoffeeAbout/>
-      <Separator/>
-      <SearchFilterPanel/>
-      <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
-      <Footer/>
+        <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
+        <Header title='Our Coffee'/>
+        <OurCoffeeAbout/>
+        <Separator/>
+        <SearchFilterPanel/>
+        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+        <Footer/>
       </div>
     )
   }
