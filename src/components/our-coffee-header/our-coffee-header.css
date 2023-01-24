@@ -19,12 +19,10 @@
   width: 100%;
   height: 100%;
   background-image: url(../../img/secondary_bg.jpg);
-  /* filter:brightness(0.6) */
 }
 
 .our-coffee-header-title {
   color: #FFF;
-  /* transform: scaleX(-1); */
   font-weight: 400;
   font-size: 40px;
 }
