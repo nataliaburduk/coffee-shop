@@ -1,0 +1,28 @@
+.pleasure-header {
+  height: 40vh;
+  position: static;
+  overflow: auto;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pleasure-header::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/third_bg.jpg);
+}
+
+.pleasure-header-title {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 40px;
+}

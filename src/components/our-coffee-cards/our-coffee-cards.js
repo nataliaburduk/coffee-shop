@@ -5,8 +5,8 @@ import Row from 'react-bootstrap/Row';
 
 import './our-coffee-cards.css'
 
-const OurCoffeeCards = ({filterData}) => {
-  const elements = filterData.map(item => {
+const OurCoffeeCards = ({coffeeCardsData}) => {
+  const elements = coffeeCardsData.map(item => {
     const {id, ...itemProps} = item;
       return (
         <CardTemplate
