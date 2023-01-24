@@ -25,6 +25,7 @@
 .our-best-title {
   font-weight: 400;
   font-size: 24px;
+  width: 70%;
 }
 
 .our-best-cards {
@@ -33,4 +34,8 @@
   border-radius: 8px;
   font-size: 16px;
   margin:auto;
+}
+
+.our-best-cards .card-container {
+  background-color: rgb(255, 255, 255, 0.6) !important;
 }

@@ -1,14 +1,15 @@
+import CardTemplate from '../cards/cards';
+
 import Container from 'react-bootstrap/Container';
-import './our-best.css'
-import '../our-best-card/our-best-card.css'
-import OurBestCard from "../our-best-card/our-best-card";
 import Row from 'react-bootstrap/Row';
+import './our-best.css'
+
 
 const OurBest = ({data}) => {
   const elements = data.map(item => {
     const {id, ...itemProps} = item;
       return (
-              <OurBestCard 
+              <CardTemplate 
               id={id}
               key={id}
               {...itemProps}

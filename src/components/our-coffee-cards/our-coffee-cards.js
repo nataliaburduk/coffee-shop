@@ -1,24 +1,25 @@
-import Container from 'react-bootstrap/Container';
-import './our-coffee-card.css'
-import OurCoffeeCard from '../our-coffee-card-items/our-coffee-card-items';
+import CardTemplate from '../cards/cards';
 
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+
+import './our-coffee-cards.css'
 
 const OurCoffeeCards = ({filterData}) => {
   const elements = filterData.map(item => {
     const {id, ...itemProps} = item;
       return (
-              < OurCoffeeCard
-              id={id}
-              key={id}
-              {...itemProps}
-              />
+        <CardTemplate
+          id={id}
+          key={id}
+          {...itemProps}
+        />
       ) 
     })
 
   return (
-    <Container fluid>
-      <Row className="our-coffee-cards">
+    <Container fluid className='our-coffee-cards-container'>
+      <Row className='our-coffee-cards'>
         {elements}
       </Row>
     </Container>
