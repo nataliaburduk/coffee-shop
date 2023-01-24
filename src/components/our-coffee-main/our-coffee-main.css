@@ -3,6 +3,10 @@
   font-family: 'Merienda';
 }
 
+.our-coffee-page .header::before {
+  background-image: url(../../img/secondary_bg.jpg);
+}
+
 .our-coffee-page .about-section-container {
   margin-top: 3rem;
   margin-bottom: 3rem;

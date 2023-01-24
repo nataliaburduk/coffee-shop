@@ -3,6 +3,10 @@
   font-family: 'Merienda';
 }
 
+.for-your-pleasure-page .header::before {
+  background-image: url(../../img/third_bg.jpg);
+}
+
 .for-your-pleasure-page .about-section-container {
   margin-top: 3rem;
   margin-bottom: 3rem;
