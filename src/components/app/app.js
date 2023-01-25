@@ -8,9 +8,6 @@ import OurBest from '../our-best/our-best';
 import Footer from '../footer/footer';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
-// import firstImg from '../../assets/img/first_card.jpg';
-// import secondImg from '../../assets/img/second_card.jpg';
-// import thirdImg from '../../assets/img/third_card.jpg';
 
 class App extends Component {
   constructor(props) {

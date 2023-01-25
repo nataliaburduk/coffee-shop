@@ -6,7 +6,6 @@ import Separator from '../separator/separator';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
 
-// import firstImg from '../../assets/img/first_card.jpg';
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import './pleasure-main.css';
 
@@ -15,7 +14,7 @@ class PleasureMain extends Component {
     super(props);
     this.state = {
       coffeeCardsData: [],
-      isFetching: false
+      isFetching: true
     }
   }
 
@@ -28,11 +27,11 @@ class PleasureMain extends Component {
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ isFetching: true, coffeeCardsData: myJson})
+        this.setState({ isFetching: false, coffeeCardsData: myJson})
       })
       .catch(e => {
         console.log(e);
-        this.setState({...this.state, isFetching: false});
+        this.setState({...this.state, isFetching: true});
     })
   }
 

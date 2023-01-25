@@ -14,7 +14,7 @@ class OurCoffeeMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFetching: false,
+      isFetching: true,
       coffeeCardsData: []
     }
   }
@@ -27,11 +27,11 @@ class OurCoffeeMain extends Component {
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ isFetching: true, coffeeCardsData: myJson})
+        this.setState({ isFetching: false, coffeeCardsData: myJson})
       })
       .catch(e => {
         console.log(e);
-        this.setState({...this.state, isFetching: false});
+        this.setState({...this.state, isFetching: true});
     })
   }
 
