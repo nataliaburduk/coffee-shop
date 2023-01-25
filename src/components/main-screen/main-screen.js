@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Container from 'react-bootstrap/Container';
-import beans from '../../img/beans-title.svg';
+import beans from '../../assets/img/beans-title.svg';
 import './main-screen.css'
 
 class MainScreen extends Component {

@@ -8,6 +8,7 @@ import {
 import App from '../app/app';
 import OurCoffeeMain from '../our-coffee-main/our-coffee-main';
 import PleasureMain from '../pleasure-main/pleasure-main';
+import Product from '../product/product';
 
 function AppRouter() {
 
@@ -17,6 +18,8 @@ function AppRouter() {
         <Route path="/" element={<App />}>
         </Route>
         <Route path="/our-coffee" element={<OurCoffeeMain />}>
+        </Route> 
+        <Route path="/products/:id" element={<Product />}>
         </Route>
         <Route path="/for-your-pleasure" element={<PleasureMain />}>
         </Route>

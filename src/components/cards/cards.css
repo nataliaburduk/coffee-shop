@@ -5,10 +5,15 @@
   background-size: cover;
   border:none !important;
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25)) !important;
+  color: black !important;
+}
+
+.card-container:hover {
+  opacity: 0.8;
 }
 
 .card-title {
-  font-size: 14px;
+  font-size: 14px !important;
   margin-bottom: 0.5rem !important;
 }
 
@@ -37,5 +42,8 @@
 .card-column {
   display: flex;
   justify-content: center;
+}
 
+.card-column > a {
+  text-decoration: none;
 }

@@ -1,0 +1,14 @@
+.product-details .header::before {
+ 
+  background-image: url(../../assets/img/secondary_bg.jpg);
+}
+
+.product-details {
+  text-align: center;
+  font-family: 'Merienda';
+}
+
+.product-details .about-section-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

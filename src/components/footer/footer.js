@@ -1,6 +1,6 @@
 import Navbar from '../nav-bar/nav-bar';
-import coffeeBeansFooter from '../../img/coffee-beans-footer.svg';
-import coffeeFooter from '../../img/coffee-footer.svg';
+import coffeeBeansFooter from '../../assets/img/coffee-beans-footer.svg';
+import coffeeFooter from '../../assets/img/coffee-footer.svg';
 import './footer.css';
 
 const Footer = () => {
