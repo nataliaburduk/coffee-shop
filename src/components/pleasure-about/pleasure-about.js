@@ -1,5 +1,5 @@
 import AboutSection from "../about-section/about-section";
-import pleasureAbout from '../../img/pleasure_about.jpg';
+import pleasureAbout from '../../assets/img/pleasure_about.jpg';
 
 class PleasureAbout extends AboutSection {
   sectionImage() {

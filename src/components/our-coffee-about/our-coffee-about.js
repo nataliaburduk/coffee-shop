@@ -1,5 +1,5 @@
 import AboutSection from "../about-section/about-section";
-import ourCoffeeAbout from '../../img/our_coffee_about.jpg';
+import ourCoffeeAbout from '../../assets/img/our_coffee_about.jpg';
 
 class OurCoffeeAbout extends AboutSection {
   sectionImage() {

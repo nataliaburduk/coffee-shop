@@ -1,5 +1,5 @@
 import { Component } from "react";
-import darkBeans from '../../img/dark-beans.svg';
+import darkBeans from '../../assets/img/dark-beans.svg';
 import './about-section.css';
 
 import Container from 'react-bootstrap/Container';
