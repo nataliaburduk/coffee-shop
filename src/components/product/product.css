@@ -12,3 +12,19 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+
+.spinner {
+  margin: 0.25rem;
+}
+
+.spinner-container {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-grow-xsm {
+  --bs-spinner-width: 0.5rem !important;
+  --bs-spinner-height: 0.5rem !important;
+}

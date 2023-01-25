@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3004/data')
+    fetch('http://localhost:3004/products?our_best=true')
       .then((response) => {
         console.log(response)
         return response.json();

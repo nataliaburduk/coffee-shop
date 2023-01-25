@@ -20,7 +20,7 @@ class OurCoffeeMain extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3004/coffee_cards_data')
+    fetch('http://localhost:3004/products')
       .then((response) => {
         console.log(response)
         return response.json();

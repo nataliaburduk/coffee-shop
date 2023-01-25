@@ -1,5 +1,4 @@
 import CardTemplate from '../cards/cards';
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 

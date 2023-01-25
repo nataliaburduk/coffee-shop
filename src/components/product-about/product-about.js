@@ -1,10 +1,10 @@
 import AboutSection from "../about-section/about-section";
-import productAbout from '../../assets/img/about_it.jpg';
+
 
 class ProductAbout extends AboutSection {
   sectionImage() {
     return (
-      <img src={productAbout} alt='About our coffee beans'></img>
+      <img src={this.props.img} alt='About our coffee beans'></img>
     )
   }
 
@@ -15,7 +15,9 @@ class ProductAbout extends AboutSection {
   sectionBody() {
     return(
       <div>
-      
+        <p>Country: {this.props.country}</p>
+        <p>Description: lalalalal</p>
+        <p>Price: {this.props.price}</p>
       </div>
     )
   }
