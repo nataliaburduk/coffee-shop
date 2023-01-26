@@ -12,8 +12,7 @@ const OurBest = ({data}) => {
               <CardTemplate 
               id={id}
               key={id}
-              {...itemProps}
-              />
+              {...itemProps}/>
       ) 
     })
 

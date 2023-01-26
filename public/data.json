@@ -1,66 +1,52 @@
 {
-  "data": [
+  "products": [
     {
-      "title": "Solimo Coffee Beans 2 kg",
-      "img": "./img/first_card.jpg",
-      "price": "10.73$",
-      "id": 1
-    },
-    {
-      "title": "Presto Coffee Beans 1 kg",
-      "img": "./img/second_card.jpg",
-      "price": "15.99$",
-      "id": 2
-    },
-    {
-      "title": "AROMISTICO Coffee 1 kg",
-      "img": "./img/third_card.jpg",
-      "price": "6.99$",
-      "id": 3
-    }
-  ],
-  "coffee_cards_data": [
-    {
+      "id": 1,
       "title": "Solimo Coffee Beans 1 kg",
-      "img": "./img/first_card.jpg",
-      "country": "Brazil",
-      "price": "6.99$",
-      "id": 1
-    },
-    {
-      "title": "Solimo Coffee Beans 1 kg",
-      "img": "./img/first_card.jpg",
+      "img": "/img/first_card.jpg",
       "country": "Kenya",
       "price": "6.99$",
-      "id": 2
+      "our_best": true
     },
     {
-      "title": "Solimo Coffee Beans 1 kg",
-      "img": "./img/first_card.jpg",
+      "id": 2,
+      "title": "Presto Coffee Beans 1 kg",
+      "img": "/img/second_card.jpg",
+      "price": "15.99$",
       "country": "Columbia",
-      "price": "6.99$",
-      "id": 3
+      "our_best": true
     },
     {
-      "title": "Solimo Coffee Beans 1 kg",
-      "img": "./img/first_card.jpg",
+      "id": 3,
+      "title": "AROMISTICO Coffee 1 kg",
+      "img": "/img/third_card.jpg",
       "country": "Brazil",
       "price": "6.99$",
-      "id": 4
+      "our_best": true
     },
     {
-      "title": "Solimo Coffee Beans 1 kg",
-      "img": "./img/first_card.jpg",
+      "id": 4,
+      "title": "Presto Coffee Beans 2 kg",
+      "img": "/img/second_card.jpg",
+      "price": "30.99$",
       "country": "Brazil",
-      "price": "6.99$",
-      "id": 5
+      "our_best": false
     },
     {
-      "title": "Solimo Coffee Beans 1 kg",
-      "img": "./img/first_card.jpg",
-      "country": "Brazil",
-      "price": "6.99$",
-      "id": 6
+      "id": 5,
+      "title": "AROMISTICO Coffee 2 kg",
+      "img": "/img/third_card.jpg",
+      "country": "Kenya",
+      "price": "11.99$",
+      "our_best": false
+    },
+    {
+      "id": 6,
+      "title": "Solimo Coffee Beans 2 kg",
+      "img": "/img/first_card.jpg",
+      "country": "Columbia",
+      "price": "10.99$",
+      "our_best": false
     }
   ]
 }
