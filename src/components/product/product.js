@@ -49,9 +49,9 @@ class Product extends Component {
           </div>
       )
     } else {
-      const {country, price, img} = this.state.productItem;
+      const {country, price, img, description} = this.state.productItem;
       return (
-        <ProductAbout country={country} price={price} img={img}/>
+        <ProductAbout country={country} price={price} img={img} description={description}/>
       )
     }
   }

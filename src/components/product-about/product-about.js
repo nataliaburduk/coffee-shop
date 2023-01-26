@@ -1,4 +1,5 @@
 import AboutSection from "../about-section/about-section";
+import './product-about.css';
 
 
 class ProductAbout extends AboutSection {
@@ -15,9 +16,9 @@ class ProductAbout extends AboutSection {
   sectionBody() {
     return(
       <div>
-        <p>Country: {this.props.country}</p>
-        <p>Description: lalalalal</p>
-        <p>Price: {this.props.price}</p>
+        <p className="products-about"><span>Country: </span> {this.props.country}</p>
+        <p className="products-about"><span>Description: </span> {this.props.description}</p>
+        <p className="products-price"><span>Price: </span>{this.props.price}</p>
       </div>
     )
   }

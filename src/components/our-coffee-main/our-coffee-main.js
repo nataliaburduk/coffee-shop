@@ -3,7 +3,8 @@ import Navbar from '../nav-bar/nav-bar';
 import Header from '../header/header';
 import OurCoffeeAbout from '../our-coffee-about/our-coffee-about';
 import Separator from '../separator/separator';
-import SearchFilterPanel from '../search-filter-form/search-filter-form';
+import Search from '../search/search';
+import Filter from '../filter/filter';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
 
@@ -15,7 +16,9 @@ class OurCoffeeMain extends Component {
     super(props);
     this.state = {
       isFetching: true,
-      coffeeCardsData: []
+      coffeeCardsData: [],
+      input: '',
+      filter: ''
     }
   }
 
@@ -35,8 +38,44 @@ class OurCoffeeMain extends Component {
     })
   }
 
+  searchCoffee = (cards, input) => {
+    if (input.length === 0) {
+      return cards;
+    }
+
+    return cards.filter(item => {
+      return (
+        (item.price.indexOf(input) > -1) || 
+        (((item.title).toLowerCase()).indexOf(input) >  -1) || 
+        (((item.country).toLowerCase()).indexOf(input) >  -1) 
+      )
+  })
+}
+
+  onUpdateSearch = (input) => {
+    this.setState({input: input.toLowerCase()});
+  }
+
+  filterPost = (cards, filter) => {
+    switch (filter) {
+      case 'start':
+        return cards.filter(item => item.country === 'Brazil');
+      case 'middle':
+        return cards.filter(item => item.country === 'Kenya');
+      case 'end':
+        return cards.filter(item => item.country === 'Columbia');
+      default:
+        return cards;
+    }
+  }
+
+  onFilterSelect = (filter) => {
+    this.setState({filter})
+  }
+
   render() {
-    const {coffeeCardsData} = this.state;
+    const {coffeeCardsData, input, filter} = this.state;
+    const visibleData = this.filterPost(this.searchCoffee(coffeeCardsData, input), filter);
 
     return (
       <div className='our-coffee-page'>
@@ -44,8 +83,9 @@ class OurCoffeeMain extends Component {
         <Header title='Our Coffee'/>
         <OurCoffeeAbout/>
         <Separator/>
-        <SearchFilterPanel/>
-        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+        <Search onUpdateSearch={this.onUpdateSearch}/>
+        <Filter filter={this.state.filter} onFilterSelect={this.onFilterSelect}/>
+        <OurCoffeeCards coffeeCardsData={visibleData}/>
         <Footer/>
       </div>
     )

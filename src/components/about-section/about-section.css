@@ -1,5 +1,8 @@
 .about-section-container {
   width: 60% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-section-content {
@@ -10,6 +13,12 @@
 .about-section-title {
   margin-bottom: 2rem;
   font-size: 24px;
+}
+
+.about-section-img {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem !important;
 }
 
 .about-section-img img {

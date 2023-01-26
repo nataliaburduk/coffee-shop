@@ -1,11 +1,12 @@
 import { Component } from 'react';
-import './search-filter-form.css'
+import Filter from '../filter/filter';
+import './search.css'
 
 class SearchFilterPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: ''
+      term: '',
     }
   }
 
@@ -20,15 +21,13 @@ class SearchFilterPanel extends Component {
       <div className="search-container">
         <div>Looking for</div>
         <input 
-          type="text"
+          type="search"
           className="search-input"
           placeholder="start typing here..."
           value={this.state.term}
           onChange={this.onUpdateSearchPanel}/>
           <div className='search-blocks'>Or filter</div>
-          <button className='filter-button start'>Brazil</button>
-          <button className='filter-button middle'>Kenya</button>
-          <button className='filter-button end'>Columbia</button>
+          
       </div>      
     )
   } 
