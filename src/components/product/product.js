@@ -6,7 +6,7 @@ import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import { Component } from "react";
 
 import { useParams } from "react-router-dom";
-import { Spinner } from "react-bootstrap";
+import Loading from "../spinner/spinner";
 import './product.css';
 
 function withParams(Component) {
@@ -42,11 +42,7 @@ class Product extends Component {
   renderCardDetails() {
     if (this.state.loading) {
       return (
-          <div className="spinner-container">
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-          </div>
+          <Loading/>
       )
     } else {
       const {country, price, img, description} = this.state.productItem;

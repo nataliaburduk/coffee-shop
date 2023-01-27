@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import Filter from '../filter/filter';
 import './search.css'
 
 class Search extends Component {

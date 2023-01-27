@@ -5,7 +5,7 @@ import PleasureAbout from '../pleasure-about/pleasure-about';
 import Separator from '../separator/separator';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
-import { Spinner } from "react-bootstrap";
+import Loading from '../spinner/spinner';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import './pleasure-main.css';
@@ -15,8 +15,7 @@ class PleasureMain extends Component {
     super(props);
     this.state = {
       coffeeCardsData: [],
-      isFetching: true,
-      loadedCards:true
+      isFetching: true
     }
   }
 
@@ -28,22 +27,18 @@ class PleasureMain extends Component {
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ coffeeCardsData: myJson, isFetching: false, loadedCards: false})
+        this.setState({ coffeeCardsData: myJson, isFetching: false})
       })
       .catch(e => {
         console.log(e);
-        this.setState({...this.state, isFetching: true, loadedCards: true});
+        this.setState({...this.state, isFetching: true});
     })
   }
 
   renderCards() {
-    if (this.state.loadedCards) {
+    if (this.state.isFetching) {
       return (
-          <div className="spinner-container">
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-          </div>
+          <Loading/>
       )
     } else {
       const {coffeeCardsData} = this.state;

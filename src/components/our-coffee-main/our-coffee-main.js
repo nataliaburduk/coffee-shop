@@ -7,7 +7,7 @@ import Search from '../search/search';
 import Filter from '../filter/filter';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
-import { Spinner } from "react-bootstrap";
+import Loading from '../spinner/spinner';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import './our-coffee-main.css';
@@ -57,11 +57,7 @@ class OurCoffeeMain extends Component {
   renderCards() {
     if (this.state.loadedCards) {
       return (
-          <div className="spinner-container">
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-            <Spinner animation="grow" size="xsm" className="spinner"/>
-          </div>
+        <Loading/>
       )
     } else {
       const {coffeeCardsData, input, filter} = this.state;
@@ -90,7 +86,11 @@ class OurCoffeeMain extends Component {
   }
 
   onFilterSelect = (filter) => {
-    this.setState({filter})
+    if (this.state.filter === filter) {
+      this.setState({filter: ''})
+    } else {
+      this.setState({filter})
+    }
   }
 
   render() {
