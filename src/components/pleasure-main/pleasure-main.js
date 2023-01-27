@@ -5,6 +5,7 @@ import PleasureAbout from '../pleasure-about/pleasure-about';
 import Separator from '../separator/separator';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
+import { Spinner } from "react-bootstrap";
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import './pleasure-main.css';
@@ -14,7 +15,8 @@ class PleasureMain extends Component {
     super(props);
     this.state = {
       coffeeCardsData: [],
-      isFetching: true
+      isFetching: true,
+      loadedCards:true
     }
   }
 
@@ -26,23 +28,39 @@ class PleasureMain extends Component {
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ isFetching: false, coffeeCardsData: myJson})
+        this.setState({ coffeeCardsData: myJson, isFetching: false, loadedCards: false})
       })
       .catch(e => {
         console.log(e);
-        this.setState({...this.state, isFetching: true});
+        this.setState({...this.state, isFetching: true, loadedCards: true});
     })
   }
 
+  renderCards() {
+    if (this.state.loadedCards) {
+      return (
+          <div className="spinner-container">
+            <Spinner animation="grow" size="xsm" className="spinner"/>
+            <Spinner animation="grow" size="xsm" className="spinner"/>
+            <Spinner animation="grow" size="xsm" className="spinner"/>
+          </div>
+      )
+    } else {
+      const {coffeeCardsData} = this.state;
+      return (
+        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+      )
+    }
+  }
+
   render() {
-    const {coffeeCardsData} = this.state;
     return (
       <div className='for-your-pleasure-page'>
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
         <Header title='For Your Pleasure'/>
         <PleasureAbout/>
         <Separator/>
-        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+        {this.renderCards()}
         <Footer/>
       </div>
     )

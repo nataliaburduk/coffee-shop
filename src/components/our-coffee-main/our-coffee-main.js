@@ -7,6 +7,7 @@ import Search from '../search/search';
 import Filter from '../filter/filter';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
+import { Spinner } from "react-bootstrap";
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import './our-coffee-main.css';
@@ -17,6 +18,7 @@ class OurCoffeeMain extends Component {
     this.state = {
       isFetching: true,
       coffeeCardsData: [],
+      loadedCards: true,
       input: '',
       filter: ''
     }
@@ -30,11 +32,11 @@ class OurCoffeeMain extends Component {
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ isFetching: false, coffeeCardsData: myJson})
+        this.setState({ isFetching: false, coffeeCardsData: myJson, loadedCards: false})
       })
       .catch(e => {
         console.log(e);
-        this.setState({...this.state, isFetching: true});
+        this.setState({...this.state, isFetching: true, loadedCards: true});
     })
   }
 
@@ -51,6 +53,24 @@ class OurCoffeeMain extends Component {
       )
   })
 }
+
+  renderCards() {
+    if (this.state.loadedCards) {
+      return (
+          <div className="spinner-container">
+            <Spinner animation="grow" size="xsm" className="spinner"/>
+            <Spinner animation="grow" size="xsm" className="spinner"/>
+            <Spinner animation="grow" size="xsm" className="spinner"/>
+          </div>
+      )
+    } else {
+      const {coffeeCardsData, input, filter} = this.state;
+      const visibleData = this.filterPost(this.searchCoffee(coffeeCardsData, input), filter);
+      return (
+        <OurCoffeeCards coffeeCardsData={visibleData}/>
+      )
+    }
+  }
 
   onUpdateSearch = (input) => {
     this.setState({input: input.toLowerCase()});
@@ -74,9 +94,6 @@ class OurCoffeeMain extends Component {
   }
 
   render() {
-    const {coffeeCardsData, input, filter} = this.state;
-    const visibleData = this.filterPost(this.searchCoffee(coffeeCardsData, input), filter);
-
     return (
       <div className='our-coffee-page'>
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
@@ -85,7 +102,7 @@ class OurCoffeeMain extends Component {
         <Separator/>
         <Search onUpdateSearch={this.onUpdateSearch}/>
         <Filter filter={this.state.filter} onFilterSelect={this.onFilterSelect}/>
-        <OurCoffeeCards coffeeCardsData={visibleData}/>
+        {this.renderCards()} 
         <Footer/>
       </div>
     )

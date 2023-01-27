@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Filter from '../filter/filter';
 import './search.css'
 
-class SearchFilterPanel extends Component {
+class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,11 +26,10 @@ class SearchFilterPanel extends Component {
           placeholder="start typing here..."
           value={this.state.term}
           onChange={this.onUpdateSearchPanel}/>
-          <div className='search-blocks'>Or filter</div>
-          
+          <div className='search-blocks'>Or filter</div>  
       </div>      
     )
   } 
 }
 
-export default SearchFilterPanel;
+export default Search;

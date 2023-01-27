@@ -18,7 +18,7 @@ class CardTemplate extends Component {
   render() {
     const {id, title, img, price} = this.props;
     return (
-      <Col className="card-column" xs='4'>
+      <Col className="card-column" sm>
         <Link to={`/products/${id}`}>
           <Card className='card-container'>
             <img src={img} alt='first-card' className='card-img' variant="top"/>
