@@ -3,22 +3,17 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 
 const Filter = (props) => {
-  const buttonsData = [
-    {name: 'start', label: 'Brazil'},
-    {name: 'middle', label: 'Kenya'},
-    {name: 'end', label: 'Columbia'}
+  const countries = ['Brazil', 'Kenya', 'Columbia'];
 
-  ];
-
-  const buttons = buttonsData.map(({name, label}) => {
-    const active = props.filter === name;
+  const buttons = countries.map((country) => {
+    const active = props.filter === country;
     const clazz = active ? 'active' : ''
     return (
-      <Button onClick={() => props.onFilterSelect(name)}
+      <Button onClick={() => props.onFilterSelect(country)}
           className={`btn ${clazz} filter-button`}
           type='button'
-          key={name}>
-            {label}
+          key={country}>
+            {country}
       </Button>
     )
   })

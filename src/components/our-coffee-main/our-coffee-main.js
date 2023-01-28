@@ -73,15 +73,10 @@ class OurCoffeeMain extends Component {
   }
 
   filterPost = (cards, filter) => {
-    switch (filter) {
-      case 'start':
-        return cards.filter(item => item.country === 'Brazil');
-      case 'middle':
-        return cards.filter(item => item.country === 'Kenya');
-      case 'end':
-        return cards.filter(item => item.country === 'Columbia');
-      default:
-        return cards;
+    if (filter) {
+      return cards.filter(item => item.country === filter);
+    } else {
+      return cards;
     }
   }
 
