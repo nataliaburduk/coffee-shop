@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items:center;
+  margin-bottom: 0 !important;
+  margin-left: 1rem;
 }
 
 .filter-button {
@@ -21,4 +23,10 @@
 
 .filter-button.active {
   opacity: 1 !important;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items:center
 }

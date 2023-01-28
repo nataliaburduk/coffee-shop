@@ -18,14 +18,13 @@ class Search extends Component {
   render() {
     return(
       <div className="search-container">
-        <div>Looking for</div>
+        <div>{this.props.label}</div>
         <input 
           type="search"
           className="search-input"
           placeholder="start typing here..."
           value={this.state.term}
-          onChange={this.onUpdateSearchPanel}/>
-          <div className='search-blocks'>Or filter</div>  
+          onChange={this.onUpdateSearchPanel}/>  
       </div>      
     )
   } 

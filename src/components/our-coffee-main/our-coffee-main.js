@@ -95,8 +95,10 @@ class OurCoffeeMain extends Component {
         <Header title='Our Coffee'/>
         <OurCoffeeAbout/>
         <Separator/>
-        <Search onUpdateSearch={this.onUpdateSearch}/>
-        <CountryFilter filter={this.state.filter} onFilterSelect={this.onFilterSelect}/>
+        <div className='filter-panel'>
+          <Search label='Looking for' onUpdateSearch={this.onUpdateSearch}/>
+          <CountryFilter label='Or filter' filter={this.state.filter} onFilterSelect={this.onFilterSelect}/>
+        </div>
         {this.renderCards()} 
         <Footer/>
       </div>
