@@ -23,25 +23,3 @@
   font-size: 12px;
   outline: none;
 }
-
-.filter-button {
-  margin: 0.1rem;
-  font-size: 12px;
-  width: 75px;
-  height: 30px;
-  border: none;
-  background: #FFFFFF;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.start {
-  border-radius: 4px 0px 0px 4px;
-}
-
-.middle {
-  border-radius: 0px 0px 0px 0px;
-}
-
-.end {
-  border-radius: 0px 4px 4px 0px;
-}

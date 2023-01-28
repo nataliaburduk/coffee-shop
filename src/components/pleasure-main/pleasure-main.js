@@ -5,6 +5,7 @@ import PleasureAbout from '../pleasure-about/pleasure-about';
 import Separator from '../separator/separator';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
+import Loading from '../spinner/spinner';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 import './pleasure-main.css';
@@ -26,7 +27,7 @@ class PleasureMain extends Component {
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ isFetching: false, coffeeCardsData: myJson})
+        this.setState({ coffeeCardsData: myJson, isFetching: false})
       })
       .catch(e => {
         console.log(e);
@@ -34,15 +35,27 @@ class PleasureMain extends Component {
     })
   }
 
+  renderCards() {
+    if (this.state.isFetching) {
+      return (
+          <Loading/>
+      )
+    } else {
+      const {coffeeCardsData} = this.state;
+      return (
+        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+      )
+    }
+  }
+
   render() {
-    const {coffeeCardsData} = this.state;
     return (
       <div className='for-your-pleasure-page'>
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
         <Header title='For Your Pleasure'/>
         <PleasureAbout/>
         <Separator/>
-        <OurCoffeeCards coffeeCardsData={coffeeCardsData}/>
+        {this.renderCards()}
         <Footer/>
       </div>
     )
