@@ -1,8 +1,8 @@
-import './filter.css';
+import './country-filter.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 
-const Filter = (props) => {
+const CountryFilter = (props) => {
   const countries = ['Brazil', 'Kenya', 'Columbia'];
 
   const buttons = countries.map((country) => {
@@ -25,4 +25,4 @@ const Filter = (props) => {
   )
 }
 
-export default Filter;
+export default CountryFilter;

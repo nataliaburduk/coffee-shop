@@ -4,7 +4,7 @@ import Header from '../header/header';
 import OurCoffeeAbout from '../our-coffee-about/our-coffee-about';
 import Separator from '../separator/separator';
 import Search from '../search/search';
-import Filter from '../filter/filter';
+import CountryFilter from '../country-filter/country-filter';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
 import Footer from '../footer/footer';
 import Loading from '../spinner/spinner';
@@ -96,7 +96,7 @@ class OurCoffeeMain extends Component {
         <OurCoffeeAbout/>
         <Separator/>
         <Search onUpdateSearch={this.onUpdateSearch}/>
-        <Filter filter={this.state.filter} onFilterSelect={this.onFilterSelect}/>
+        <CountryFilter filter={this.state.filter} onFilterSelect={this.onFilterSelect}/>
         {this.renderCards()} 
         <Footer/>
       </div>
