@@ -1,15 +1,15 @@
 import {Component} from 'react';
-import Navbar from '../nav-bar/nav-bar';
-import Header from '../header/header';
+import Navbar from '../../common-components/nav-bar/nav-bar';
+import Header from '../../common-components/header/header';
 import OurCoffeeAbout from '../our-coffee-about/our-coffee-about';
-import Separator from '../separator/separator';
+import Separator from '../../common-components/separator/separator';
 import Search from '../search/search';
 import CountryFilter from '../country-filter/country-filter';
 import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
-import Footer from '../footer/footer';
-import Loading from '../spinner/spinner';
+import Footer from '../../common-components/footer/footer';
+import Loading from '../../common-components/spinner/spinner';
 
-import coffeeBeans from '../../assets/img/coffee-beans.svg'
+import coffeeBeans from '../../../assets/img/coffee-beans.svg'
 import './our-coffee-main.css';
 
 class OurCoffeeMain extends Component {

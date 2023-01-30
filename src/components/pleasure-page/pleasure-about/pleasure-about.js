@@ -1,15 +1,15 @@
-import AboutSection from "../about-section/about-section";
-import ourCoffeeAbout from '../../assets/img/our_coffee_about.jpg';
+import AboutSection from '../../common-components/about-section/about-section';
+import pleasureAbout from '../../../assets/img/pleasure_about.jpg';
 
-class OurCoffeeAbout extends AboutSection {
+class PleasureAbout extends AboutSection {
   sectionImage() {
     return (
-      <img src={ourCoffeeAbout} alt='About our coffee beans'></img>
+      <img src={pleasureAbout} alt='About our coffee beans'></img>
     )
   }
 
   sectionTitle() {
-    return 'About our beans'
+    return 'About our goods'
   }
 
   sectionBody() {
@@ -30,4 +30,4 @@ class OurCoffeeAbout extends AboutSection {
 
 }
 
-export default OurCoffeeAbout;
+export default PleasureAbout;

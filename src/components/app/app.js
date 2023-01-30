@@ -1,11 +1,11 @@
 import {Component} from 'react';
 
 import './app.css';
-import MainScreen from '../main-screen/main-screen';
-import Navbar from '../nav-bar/nav-bar';
-import AboutUs from '../about-us/about-us';
-import OurBest from '../our-best/our-best';
-import Footer from '../footer/footer';
+import MainScreen from '../main-page/main-screen/main-screen';
+import Navbar from '../common-components/nav-bar/nav-bar';
+import AboutUs from '../main-page/about-us/about-us';
+import OurBest from '../main-page/our-best/our-best';
+import Footer from '../common-components/footer/footer';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
 

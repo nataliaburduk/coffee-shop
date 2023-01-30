@@ -1,4 +1,3 @@
-import Component from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,12 +5,11 @@ import {
 } from "react-router-dom";
 
 import App from '../app/app';
-import OurCoffeeMain from '../our-coffee-main/our-coffee-main';
-import PleasureMain from '../pleasure-main/pleasure-main';
-import Product from '../product/product';
+import OurCoffeeMain from "../our-coffee-page/our-coffee-main/our-coffee-main";
+import PleasureMain from "../pleasure-page/pleasure-main/pleasure-main";
+import Product from '../product-page/product/product';
 
-class AppRouter extends Component {
-  render() {
+const AppRouter = () => {
     return (
       <Router>
         <Routes>
@@ -26,7 +24,6 @@ class AppRouter extends Component {
         </Routes>
       </Router>
     )
-  }
 }
 
 export default AppRouter;

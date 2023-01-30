@@ -1,13 +1,13 @@
 import {Component} from 'react';
-import Navbar from '../nav-bar/nav-bar';
-import Header from '../header/header';
+import Navbar from '../../common-components/nav-bar/nav-bar';
+import Header from '../../common-components/header/header';
 import PleasureAbout from '../pleasure-about/pleasure-about';
-import Separator from '../separator/separator';
-import OurCoffeeCards from '../our-coffee-cards/our-coffee-cards';
-import Footer from '../footer/footer';
-import Loading from '../spinner/spinner';
+import Separator from '../../common-components/separator/separator';
+import OurCoffeeCards from '../../our-coffee-page/our-coffee-cards/our-coffee-cards';
+import Footer from '../../common-components/footer/footer';
+import Loading from '../../common-components/spinner/spinner';
 
-import coffeeBeans from '../../assets/img/coffee-beans.svg'
+import coffeeBeans from '../../../assets/img/coffee-beans.svg'
 import './pleasure-main.css';
 
 class PleasureMain extends Component {

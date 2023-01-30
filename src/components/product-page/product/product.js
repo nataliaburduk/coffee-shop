@@ -1,12 +1,12 @@
-import Header from "../header/header";
-import Navbar from "../nav-bar/nav-bar";
+import Header from "../../common-components/header/header";
+import Navbar from "../../common-components/nav-bar/nav-bar";
 import ProductAbout from "../product-about/product-about";
-import Footer from "../footer/footer";
-import coffeeBeans from '../../assets/img/coffee-beans.svg'
+import Footer from "../../common-components/footer/footer";
+import coffeeBeans from '../../../assets/img/coffee-beans.svg'
 import { Component } from "react";
 
 import { useParams } from "react-router-dom";
-import Loading from "../spinner/spinner";
+import Loading from "../../common-components/spinner/spinner";
 import './product.css';
 
 function withParams(Component) {
