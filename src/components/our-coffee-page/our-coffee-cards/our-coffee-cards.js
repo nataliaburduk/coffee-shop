@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import CardTemplate from '../cards/cards';
+import CardTemplate from '../../shared/cards/cards';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 

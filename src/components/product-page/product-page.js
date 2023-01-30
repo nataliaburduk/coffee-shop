@@ -1,20 +1,19 @@
-import Header from "../header/header";
-import Navbar from "../nav-bar/nav-bar";
-import ProductAbout from "../product-about/product-about";
-import Footer from "../footer/footer";
-import coffeeBeans from '../../assets/img/coffee-beans.svg'
+import Header from "../shared/header/header";
+import Navbar from "../shared/nav-bar/nav-bar";
+import Loading from "../shared/spinner/spinner";
+import ProductAbout from "./product-about/product-about";
+import Footer from "../shared/footer/footer";
 import { Component } from "react";
-
 import { useParams } from "react-router-dom";
-import Loading from "../spinner/spinner";
-import './product.css';
+
+import coffeeBeans from '../../assets/img/coffee-beans.svg'
+import './product-page.css';
 
 function withParams(Component) {
   return props => <Component {...props} params={useParams()} />;
 }
 
-
-class Product extends Component {
+class ProductPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -65,4 +64,4 @@ class Product extends Component {
     }
 }
 
-export default withParams(Product)
+export default withParams(ProductPage)

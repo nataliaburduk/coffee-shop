@@ -1,4 +1,4 @@
-import AboutSection from "../about-section/about-section";
+import AboutSection from '../../shared/about-section/about-section';
 import './product-about.css';
 
 
