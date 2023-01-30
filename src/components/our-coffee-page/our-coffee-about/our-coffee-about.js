@@ -1,4 +1,4 @@
-import AboutSection from "../../common-components/about-section/about-section";
+import AboutSection from "../../shared/about-section/about-section";
 import ourCoffeeAbout from '../../../assets/img/our_coffee_about.jpg';
 
 class OurCoffeeAbout extends AboutSection {

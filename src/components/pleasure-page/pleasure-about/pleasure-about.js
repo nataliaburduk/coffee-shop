@@ -1,4 +1,4 @@
-import AboutSection from '../../common-components/about-section/about-section';
+import AboutSection from '../../shared/about-section/about-section';
 import pleasureAbout from '../../../assets/img/pleasure_about.jpg';
 
 class PleasureAbout extends AboutSection {
