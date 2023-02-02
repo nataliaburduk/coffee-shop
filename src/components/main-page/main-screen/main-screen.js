@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Container from 'react-bootstrap/Container';
-import ModalWindow from '../../shared/modal/modal';
+import MainModal from "../main-modal/main-modal";
 
 import beans from '../../../assets/img/beans-title.svg';
 import './main-screen.css';
@@ -34,7 +34,7 @@ class MainScreen extends Component {
           <p className='main-subtitle'>We makes every day full of energy and taste</p>
           <p className='main-subtitle'>Want to try our beans?</p>
           <button className='main-btn' onClick={this.showModal}>More</button>
-          <ModalWindow show={this.state.show} handleClose={this.hideModal}/>
+          <MainModal show={this.state.show} handleClose={this.hideModal}/>
         </div>
       </Container>
     ) 
