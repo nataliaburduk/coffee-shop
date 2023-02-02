@@ -1,22 +1,26 @@
 import React, { Component} from 'react';
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import './modal.css'
 
 class ModalWindow extends Component {
-  modalHeader() {}
+  modalHeaderTitle() {}
 
   modalBody() {}
 
-  modalFooter() {}
+  modalFooterBtn() {}
 
   render() { 
     return (
       <>
-        <Modal className="modal-container" show={this.props.show} onHide={this.props.handleClose} aria-labelledby="contained-modal-title-vcenter"
-        centered>
-          {this.modalHeader()}
+        <Modal className="modal-container" show={this.props.show} onHide={this.props.handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
+          <Modal.Header className='modal-header' closeButton>
+            <Modal.Title className='modal-title'>{this.modalHeaderTitle()}</Modal.Title>
+          </Modal.Header>
           {this.modalBody()}
-          {this.modalFooter()}
+          <Modal.Footer className='modal-footer'>
+            <Button className='submit-btn'>{this.modalFooterBtn()}</Button>
+          </Modal.Footer>
         </Modal>
       </>
     )

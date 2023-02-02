@@ -1,16 +1,15 @@
 import ModalWindow from '../../shared/modal/modal';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 
 class MainModal extends ModalWindow {
-  modalHeader() {
-    return (
-      <Modal.Header className='modal-header' closeButton>
-        <Modal.Title className='modal-title'>Please, enter your name and email to get the detailed info</Modal.Title>
-      </Modal.Header>
-    )
+  modalHeaderTitle() {
+    return 'Please, enter your name and email to get the detailed info'
+  }
+
+  modalFooterBtn() {
+    return 'Send'
   }
 
   modalBody() {
@@ -25,15 +24,6 @@ class MainModal extends ModalWindow {
       </Modal.Body>
     )
   }
-
-  modalFooter() {
-    return (
-    <Modal.Footer className='modal-footer'>
-      <Button className='submit-btn'>Send</Button>
-    </Modal.Footer>
-    )
-  }
-
 }
 
 export default MainModal;
