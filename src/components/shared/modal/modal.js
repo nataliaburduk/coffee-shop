@@ -17,7 +17,7 @@ class ModalWindow extends Component {
           <Modal.Header className='modal-header' closeButton>
             <Modal.Title className='modal-title'>{this.modalHeaderTitle()}</Modal.Title>
           </Modal.Header>
-          {this.modalBody()}
+          <Modal.Body className='modal-body'>{this.modalBody()}</Modal.Body>
           <Modal.Footer className='modal-footer'>
             <Button className='submit-btn'>{this.modalFooterBtn()}</Button>
           </Modal.Footer>
