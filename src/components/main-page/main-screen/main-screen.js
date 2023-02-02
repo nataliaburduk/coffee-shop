@@ -1,9 +1,30 @@
 import { Component } from "react";
 import Container from 'react-bootstrap/Container';
+import MainModal from "../main-modal/main-modal";
+
 import beans from '../../../assets/img/beans-title.svg';
-import './main-screen.css'
+import './main-screen.css';
 
 class MainScreen extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      show: false
+    }
+  }
+
+  showModal = (e) => {
+    this.setState({
+      show: true
+    })
+  }
+
+  hideModal = (e) => {
+    this.setState({
+      show: false
+    })
+  }
+
   render() {
     return (
       <Container fluid className='main-screen'>
@@ -12,7 +33,8 @@ class MainScreen extends Component {
           <img src={beans} alt='coffee-title'/>
           <p className='main-subtitle'>We makes every day full of energy and taste</p>
           <p className='main-subtitle'>Want to try our beans?</p>
-          <button className='main-btn'>More</button>
+          <button className='main-btn' onClick={this.showModal}>More</button>
+          <MainModal show={this.state.show} handleClose={this.hideModal}/>
         </div>
       </Container>
     ) 
