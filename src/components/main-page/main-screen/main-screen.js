@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import MainModal from "../main-modal/main-modal";
 
 import beans from '../../../assets/img/beans-title.svg';
-import './main-screen.css';
+import './main-screen.scss';
 
 class MainScreen extends Component {
   constructor(props) {

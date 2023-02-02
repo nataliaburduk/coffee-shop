@@ -1,6 +1,6 @@
 import { Component } from "react";
 import darkBeans from '../../../assets/img/dark-beans.svg';
-import './about-section.css';
+import './about-section.scss';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

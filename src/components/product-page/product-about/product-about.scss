@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+.products-about {
+  text-align: left;
+  font-weight: 400;
+  font-size: $small-font;
+}
+
+.products-price {
+  text-align: left;
+  font-weight: 700;
+  font-size: $regular-font;
+  span {
+    font-weight: 400;
+    font-size: $small-font;
+  }
+}

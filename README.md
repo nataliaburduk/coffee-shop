@@ -19,13 +19,17 @@ List the ready features here:
 - Filter
 - Search
 - Cards
+- Modal Window
 - Routing
 
 
 ## Screenshots
 Main page: ![Example screenshot](./src/assets/img/screencapture-localhost-3000-2023-02-01-10_07_01.png)
+
 Our Coffee page with filter and search features: ![Example screenshot](./src/assets/img/screencapture-localhost-3000-our-coffee-2023-02-01-10_07_49.png)
+
 For You Pleasure page with cards: ![Example screenshot](./src/assets/img/screencapture-localhost-3000-for-your-pleasure-2023-02-01-10_08_25.png)
+
 Product's page with all details: ![Example screenshot](./src/assets/img/screencapture-localhost-3000-products-2-2023-02-01-10_08_07.png)
 
 ## Setup
@@ -49,4 +53,4 @@ Room for improvement:
 - Pay attention to the naming of your methods and functions
 
 To do:
-- Madal Window by clicking on the button on the main page
+- Switch CSS styles to SASS

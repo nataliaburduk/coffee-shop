@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .search-container {
   display: inline-flex;
   flex-direction: row;
@@ -20,6 +22,6 @@
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   height: 30px;
-  font-size: 12px;
+  font-size: $xsmall-font;
   outline: none;
 }

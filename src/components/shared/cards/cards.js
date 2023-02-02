@@ -2,7 +2,7 @@ import { Component } from "react";
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import {Link} from "react-router-dom";
-import './cards.css';
+import './cards.scss';
 
 
 class CardTemplate extends Component {

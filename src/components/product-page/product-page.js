@@ -7,7 +7,7 @@ import { Component } from "react";
 import { useParams } from "react-router-dom";
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
-import './product-page.css';
+import './product-page.scss';
 
 function withParams(Component) {
   return props => <Component {...props} params={useParams()} />;

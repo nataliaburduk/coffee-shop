@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .our-best-container {
   height: 80vh;
   position: static;
@@ -24,16 +26,8 @@
 
 .our-best-title {
   font-weight: 400;
-  font-size: 24px;
+  font-size: $regular-title-font;
   width: 70%;
-}
-
-.our-best-cards {
-  display: flex;
-  justify-content: flex-start;
-  border-radius: 8px;
-  font-size: 16px;
-  margin:auto;
 }
 
 .our-best-cards .card-container {

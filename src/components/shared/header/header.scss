@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .header {
   height: 40vh !important;
   position: static;
@@ -22,7 +24,6 @@
 
 .header-title {
   color: #FFF;
-  font-weight: 400;
-  font-size: 40px;
+  font-size: $large-title-font;
 }
 

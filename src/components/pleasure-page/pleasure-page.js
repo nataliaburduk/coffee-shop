@@ -8,7 +8,7 @@ import Footer from '../shared/footer/footer';
 import Loading from '../shared/spinner/spinner';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
-import './pleasure-page.css';
+import './pleasure-page.scss';
 
 class PleasurePage extends Component {
   constructor(props) {

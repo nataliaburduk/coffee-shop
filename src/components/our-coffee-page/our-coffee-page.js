@@ -10,7 +10,7 @@ import Footer from '../shared/footer/footer';
 import Loading from '../shared/spinner/spinner';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
-import './our-coffee-page.css';
+import './our-coffee-page.scss';
 
 class OurCoffeePage extends Component {
   constructor(props) {

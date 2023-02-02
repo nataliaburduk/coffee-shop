@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .about-section-container {
   width: 60% !important;
   display: flex;
@@ -7,21 +9,22 @@
 
 .about-section-content {
   margin-top: 2rem;
-  font-size: 14px;
+  font-size: $small-font;
 }
 
 .about-section-title {
   margin-bottom: 2rem;
-  font-size: 24px;
+  font-size: $regular-title-font;
 }
 
 .about-section-img {
   display: flex;
   align-items: center;
   padding-right: 2rem !important;
+  img {
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
 }
 
-.about-section-img img {
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-  width: 100%;
-}
+

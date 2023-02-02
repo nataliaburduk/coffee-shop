@@ -1,0 +1,10 @@
+.MainPage {
+  text-align: center;
+  font-family: 'Merienda';
+  .about-section-container {
+    height: 100vh;
+    width: 40% !important;
+    display: flex;
+    align-items: center;
+  }
+}

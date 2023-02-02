@@ -1,6 +1,6 @@
 import {Component} from 'react';
 
-import './main-page.css';
+import './main-page.scss';
 import MainScreen from './main-screen/main-screen';
 import Navbar from '../shared/nav-bar/nav-bar';
 import AboutUs from './about-us/about-us';

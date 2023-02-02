@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Container from 'react-bootstrap/Container';
-import './header.css'
+import './header.scss'
 
 class Header extends Component {
 

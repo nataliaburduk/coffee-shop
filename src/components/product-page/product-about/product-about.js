@@ -1,5 +1,5 @@
 import AboutSection from '../../shared/about-section/about-section';
-import './product-about.css';
+import './product-about.scss';
 
 
 class ProductAbout extends AboutSection {

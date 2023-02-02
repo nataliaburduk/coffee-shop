@@ -1,7 +1,7 @@
 import { Component } from "react";
 import {Link} from "react-router-dom";
 
-import './nav-bar.css'
+import './nav-bar.scss'
 
 class Navbar extends Component {
   render() {

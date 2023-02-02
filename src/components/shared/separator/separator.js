@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './separator.css';
+import './separator.scss';
 
 class Separator extends Component {
   render() {

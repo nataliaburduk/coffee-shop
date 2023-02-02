@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .card-container {
   margin: 1.75rem auto !important;
   width: 240px;
@@ -13,12 +15,12 @@
 }
 
 .card-title {
-  font-size: 14px !important;
+  font-size: $small-font;
   margin-bottom: 0.5rem !important;
 }
 
 .card-price {
-  font-size: 14px;
+  font-size: $small-font;
   text-align: right;
   margin-top: 0;
   margin-bottom: 1rem !important;
@@ -26,7 +28,7 @@
 }
 
 .card-country {
-  font-size: 14px;
+  font-size: $small-font;
   text-align: right;
   margin-top: 0;
   margin-bottom: 0.5rem !important;
@@ -42,8 +44,7 @@
 .card-column {
   display: flex;
   justify-content: center;
-}
-
-.card-column > a {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 }

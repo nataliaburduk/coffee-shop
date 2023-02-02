@@ -3,7 +3,7 @@ import CardTemplate from '../../shared/cards/cards';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import './our-best.css'
+import './our-best.scss'
 
 
 class OurBest extends Component {
