@@ -1,3 +1,6 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
 .our-coffee-page {
   text-align: center;
   font-family: 'Merienda';
@@ -5,12 +8,10 @@
     background-image: url(../../assets/img/secondary_bg.jpg);
   }
   .about-section-container {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: $large-margin auto;
   }
 }
 
 .filter-panel {
-  display: flex;
-  justify-content: center;
+  @include displayCenter;
 }

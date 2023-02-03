@@ -1,49 +1,44 @@
 @import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
 
 .card-container {
-  margin: 1.75rem auto !important;
+  @include boxShadow($white-color);
+
+  margin: calc($regular-margin - 0.25rem) auto !important;
+  color: $black-color !important;
   width: 240px;
   height: 260px;
-  background-size: cover;
-  border:none !important;
-  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25)) !important;
-  color: black !important;
-}
 
-.card-container:hover {
-  opacity: 0.9;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .card-title {
   font-size: $small-font;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: $xsmal-margin !important;
 }
 
 .card-price {
-  font-size: $small-font;
-  text-align: right;
-  margin-top: 0;
-  margin-bottom: 1rem !important;
-  margin-right: 2rem;
+  @include cardDetails;
+
+  margin-bottom: $small-margin !important;
 }
 
 .card-country {
-  font-size: $small-font;
-  text-align: right;
-  margin-top: 0;
-  margin-bottom: 0.5rem !important;
-  margin-right: 2rem;
+  @include cardDetails;
+
+  margin-bottom: $xsmal-margin !important;
 }
 
 .card-img {
   height: 130px !important;
   width: 151px !important;
-  margin: 1.5rem auto;
+  margin: $medium-plus-margin auto;
 }
 
 .card-column {
-  display: flex;
-  justify-content: center;
+  @include displayCenter;
   a {
     text-decoration: none;
   }

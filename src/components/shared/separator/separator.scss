@@ -1,10 +1,12 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
 .separator {
   width: 240px;
-  border-top: 1px solid black;
+  border-top: 1px solid $black-color;
 }
 
 .separator-container {
-  display: flex;
-  justify-content: center;
-  margin: 3rem 0;
+  @include displayCenter;
+  margin: $large-margin 0;
 }

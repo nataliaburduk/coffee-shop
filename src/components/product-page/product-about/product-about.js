@@ -5,7 +5,7 @@ import './product-about.scss';
 class ProductAbout extends AboutSection {
   sectionImage() {
     return (
-      <img src={this.props.img} alt='About our coffee beans'></img>
+      <img src={this.props.img} alt='About our coffee beans' className="product-img"></img>
     )
   }
 
@@ -15,9 +15,9 @@ class ProductAbout extends AboutSection {
 
   sectionBody() {
     return(
-      <div>
-        <p className="products-about"><span>Country: </span> {this.props.country}</p>
-        <p className="products-about"><span>Description: </span> {this.props.description}</p>
+      <div className="product-about">
+        <p><span>Country: </span> {this.props.country}</p>
+        <p><span>Description: </span> {this.props.description}</p>
         <p className="products-price"><span>Price: </span>{this.props.price}</p>
       </div>
     )

@@ -1,6 +1,8 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
 .our-coffee-cards-container {
-  display: flex;
-  justify-content: center;
+  @include displayCenter;
 }
 
 .our-coffee-cards {

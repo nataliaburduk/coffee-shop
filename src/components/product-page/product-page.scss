@@ -1,11 +1,13 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
 .product-details {
   text-align: center;
   font-family: 'Merienda';
   .about-section-container {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: center;
+    @include displayCenter;
+
+    margin: $large-margin auto;
   }
   .header::before {
     background-image: url(../../assets/img/secondary_bg.jpg);
@@ -13,14 +15,13 @@
 }
 
 .spinner {
-  margin: 0.25rem;
+  margin: calc($xsmal-margin/2);
 }
 
 .spinner-container {
-  height: 15vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayCenter;
+
+  height: 15vh;;
 }
 
 .spinner-grow-xsm {

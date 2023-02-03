@@ -46,7 +46,7 @@ class ProductPage extends Component {
     } else {
       const {country, price, img, description} = this.state.productItem;
       return (
-        <ProductAbout country={country} price={price} img={img} description={description}/>
+        <ProductAbout country={country} price={price} img={img} description={description} className="product-about"/>
       )
     }
   }

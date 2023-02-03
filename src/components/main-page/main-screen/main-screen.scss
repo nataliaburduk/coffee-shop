@@ -1,46 +1,43 @@
 @import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
 
 .main-screen {
+  @include displayCenter;
+
+  color: $white-color;
+  font-weight: 300;
   height: 100vh;
   position: static;
   overflow: auto;
   transform: matrix(1, 0, 0, 1, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.main-screen::before {
-  content: '';
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  background-size:cover;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../../assets/img/main_bg_1.jpg);
+  &::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../assets/img/main_bg_1.jpg);
+  }  
 }
 
 .main-title {
-  color: #FFF;
-  font-weight: 400;
   font-size: $large-title-font;
 }
 
 .main-subtitle {
-  color: #FFF;
-  font-weight: 300;
   font-size: $regular-title-font;
 }
 
 .main-btn {
-  color: #FFF !important;
-  font-weight: 300;
+  color: $white-color !important;
   font-size: $small-font !important;
-  background:none !important;
-  border: 1px solid #FFFFFF !important;
+  background: none !important;
+  border: 1px solid $white-color !important;
   border-radius: 3px !important;
   width: 120px !important;
   height: 30px !important;

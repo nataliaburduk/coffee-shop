@@ -1,3 +1,6 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
 .for-your-pleasure-page {
   text-align: center;
   font-family: 'Merienda';
@@ -5,7 +8,6 @@
     background-image: url(../../assets/img/third_bg.jpg);
   }
   .about-section-container {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: $large-margin auto;
   }
 }
