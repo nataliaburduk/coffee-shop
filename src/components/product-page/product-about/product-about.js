@@ -1,7 +1,6 @@
 import AboutSection from '../../shared/about-section/about-section';
 import './product-about.scss';
 
-
 class ProductAbout extends AboutSection {
   sectionImage() {
     return (

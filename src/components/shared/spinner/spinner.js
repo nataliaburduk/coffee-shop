@@ -8,7 +8,7 @@ class Loading extends Component {
             <Spinner animation="grow" size="xsm" className="spinner"/>
             <Spinner animation="grow" size="xsm" className="spinner"/>
             <Spinner animation="grow" size="xsm" className="spinner"/>
-          </div>
+    </div>
     )
   }
 }

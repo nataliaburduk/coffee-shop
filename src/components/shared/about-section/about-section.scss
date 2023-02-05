@@ -21,10 +21,8 @@
   @include displayCenter;
 
   padding-right: 2rem !important;
-  
+
   img {
     @include boxShadow($white-color);
   }
 }
-
-

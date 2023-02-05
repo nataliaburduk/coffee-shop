@@ -9,7 +9,7 @@ class CountryFilter extends Component {
     const countries = ['Brazil', 'Kenya', 'Columbia'];
     const buttons = countries.map((country) => {
       const active = filter === country;
-      const clazz = active ? 'active' : ''
+      const clazz = active ? 'active' : '';
       return (
         <Button onClick={() => onFilterSelect(country)}
             className={`btn ${clazz} filter-button`}

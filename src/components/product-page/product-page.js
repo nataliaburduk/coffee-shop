@@ -64,4 +64,4 @@ class ProductPage extends Component {
     }
 }
 
-export default withParams(ProductPage)
+export default withParams(ProductPage);

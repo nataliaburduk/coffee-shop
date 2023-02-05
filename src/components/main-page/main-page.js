@@ -1,6 +1,5 @@
 import {Component} from 'react';
 
-import './main-page.scss';
 import MainScreen from './main-screen/main-screen';
 import Navbar from '../shared/nav-bar/nav-bar';
 import AboutUs from './about-us/about-us';
@@ -8,6 +7,7 @@ import OurBest from './our-best/our-best';
 import Footer from '../shared/footer/footer';
 
 import coffeeBeans from '../../assets/img/coffee-beans.svg'
+import './main-page.scss';
 
 class MainPage extends Component {
   constructor(props) {
@@ -48,5 +48,4 @@ class MainPage extends Component {
   }
 }
 
-   
 export default MainPage;

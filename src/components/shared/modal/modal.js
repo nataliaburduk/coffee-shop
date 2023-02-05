@@ -5,9 +5,7 @@ import './modal.scss'
 
 class ModalWindow extends Component {
   modalHeaderTitle() {}
-
   modalBody() {}
-
   modalFooterBtn() {}
 
   render() { 

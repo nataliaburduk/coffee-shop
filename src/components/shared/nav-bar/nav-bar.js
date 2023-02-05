@@ -12,7 +12,7 @@ class Navbar extends Component {
 
     return (
       <nav className={navBarType}>
-          <div className="nav-container">
+        <div className="nav-container">
           <img src={coffeeLogo} alt='coffee-logo'className='coffee-logo'/>
           <ul className="nav-menu">
             <li className="nav-item">
@@ -31,8 +31,8 @@ class Navbar extends Component {
               </Link>
             </li>
           </ul>
-      </div>
-        </nav>
+        </div>
+      </nav>
     )
   } 
 }
