@@ -3,12 +3,13 @@
 
 .product-details {
   text-align: center;
-  font-family: 'Merienda';
+
   .about-section-container {
     @include displayCenter;
 
     margin: $large-margin auto;
   }
+  
   .header::before {
     background-image: url(../../assets/img/secondary_bg.jpg);
   }

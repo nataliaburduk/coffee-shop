@@ -2,7 +2,7 @@
 @import '../../../assets/styles/mixins.scss';
 
 .our-best-container {
-@include displayCenter;
+  @include displayCenter;
 
   height: 80vh;
   position: static;

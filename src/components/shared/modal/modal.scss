@@ -3,7 +3,8 @@
 
 
 .modal-container {
-  font-family: 'Merienda' !important
+  font-family: 'Merienda' !important;
+  font-size: $small-font !important;
 }
 
 .modal-header {
@@ -19,16 +20,12 @@
   font-size: $small-font !important;
 }
 
-.modal-body {
-  font-size: $small-font !important;
-}
-
 .form-placeholder {
   @include boxShadow($white-color);
 
   margin-bottom: $medium-margin;
-  border-radius: 3px !important;
   font-size: $xsmall-font !important;
+  border-radius: 3px !important;
   opacity: 0.8;
 }
 
@@ -45,7 +42,7 @@
   @include displayCenter;
   @include boxShadow($white-color);
 
-  color: white !important;
+  color: $white-color !important;
   font-size: $xsmall-font !important;
   border-radius: 4px !important;
   width: 15%;

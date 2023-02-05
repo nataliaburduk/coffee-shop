@@ -4,12 +4,11 @@
 .filter {
   @include displayCenter;
   margin: 0 $small-margin !important;
-
 }
 
 .filter-button {
-@include displayCenter;
-@include boxShadow($white-color !important);
+  @include displayCenter;
+  @include boxShadow($white-color !important);
 
   font-size: $xsmall-font !important;
   width: 75px;
