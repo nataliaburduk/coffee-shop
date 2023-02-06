@@ -1,5 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
 
 .card-container {
   @include boxShadow($white-color);
@@ -39,7 +39,7 @@
 
 .card-column {
   @include displayCenter;
-  
+
   a {
     text-decoration: none;
   }

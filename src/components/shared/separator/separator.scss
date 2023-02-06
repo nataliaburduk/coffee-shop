@@ -1,5 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
 
 .separator {
   width: 240px;
@@ -8,6 +8,6 @@
 
 .separator-container {
   @include displayCenter;
-  
+
   margin: $large-margin 0;
 }

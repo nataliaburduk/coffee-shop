@@ -1,10 +1,10 @@
 import { Component } from "react";
-import darkBeans from '../../../assets/img/dark-beans.svg';
-import './about-section.scss';
+import darkBeans from "../../../assets/img/dark-beans.svg";
+import "./about-section.scss";
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class AboutSection extends Component {
   sectionImage() {}
@@ -14,11 +14,7 @@ class AboutSection extends Component {
   imageCol() {
     const img = this.sectionImage();
     if (img) {
-      return (
-        <Col className="about-section-img">
-          {img}
-        </Col>
-      )
+      return <Col className="about-section-img">{img}</Col>;
     }
   }
 
@@ -28,19 +24,15 @@ class AboutSection extends Component {
         <Row className="justify-content-center">
           {this.imageCol()}
           <Col className="about-section-body">
-            <div className="about-section-title">
-              {this.sectionTitle()}
-            </div>
+            <div className="about-section-title">{this.sectionTitle()}</div>
             <div>
-              <img src={darkBeans} alt='coffee-title'/>
+              <img src={darkBeans} alt="coffee-title" />
             </div>
-            <div className="about-section-content">
-              { this.sectionBody() }
-            </div>
+            <div className="about-section-content">{this.sectionBody()}</div>
           </Col>
         </Row>
       </Container>
-    )
+    );
   }
 }
 

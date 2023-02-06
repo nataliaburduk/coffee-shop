@@ -1,43 +1,47 @@
 import { Component } from "react";
-import Container from 'react-bootstrap/Container';
+import Container from "react-bootstrap/Container";
 import MainModal from "../main-modal/main-modal";
 
-import beans from '../../../assets/img/beans-title.svg';
-import './main-screen.scss';
+import beans from "../../../assets/img/beans-title.svg";
+import "./main-screen.scss";
 
 class MainScreen extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      show: false
-    }
+      show: false,
+    };
   }
 
   showModal = (e) => {
     this.setState({
-      show: true
-    })
-  }
+      show: true,
+    });
+  };
 
   hideModal = (e) => {
     this.setState({
-      show: false
-    })
-  }
+      show: false,
+    });
+  };
 
   render() {
     return (
-      <Container fluid className='main-screen'>
-        <div className='main-title'>
+      <Container fluid className="main-screen">
+        <div className="main-title">
           <p>Everything You Love About Coffee</p>
-          <img src={beans} alt='coffee-title'/>
-          <p className='main-subtitle'>We makes every day full of energy and taste</p>
-          <p className='main-subtitle'>Want to try our beans?</p>
-          <button className='main-btn' onClick={this.showModal}>More</button>
-          <MainModal show={this.state.show} handleClose={this.hideModal}/>
+          <img src={beans} alt="coffee-title" />
+          <p className="main-subtitle">
+            We makes every day full of energy and taste
+          </p>
+          <p className="main-subtitle">Want to try our beans?</p>
+          <button className="main-btn" onClick={this.showModal}>
+            More
+          </button>
+          <MainModal show={this.state.show} handleClose={this.hideModal} />
         </div>
       </Container>
-    ) 
+    );
   }
 }
 

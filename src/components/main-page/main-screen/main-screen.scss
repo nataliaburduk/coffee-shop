@@ -1,6 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
-
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
 
 .main-screen {
   @include displayCenter;
@@ -13,16 +12,16 @@
   transform: matrix(1, 0, 0, 1, 0, 0);
 
   &::before {
-    content: '';
+    content: "";
     position: fixed;
     left: 0;
     right: 0;
     z-index: -1;
-    background-size:cover;
+    background-size: cover;
     width: 100%;
     height: 100%;
     background-image: url(../../../assets/img/main_bg_1.jpg);
-  }  
+  }
 }
 
 .main-title {

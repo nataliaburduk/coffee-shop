@@ -1,5 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
 
 .search-container {
   display: inline-flex;
@@ -15,7 +15,7 @@
 }
 
 .search-input {
-  @include boxShadow($white-color);;
+  @include boxShadow($white-color);
 
   width: 180px !important;
   margin: $small-margin $small-margin;

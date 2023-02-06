@@ -1,5 +1,5 @@
-@import '../../assets/styles/variables.scss';
-@import '../../assets/styles/mixins.scss';
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
 
 .product-details {
   text-align: center;
@@ -22,7 +22,7 @@
 .spinner-container {
   @include displayCenter;
 
-  height: 15vh;;
+  height: 15vh;
 }
 
 .spinner-grow-xsm {

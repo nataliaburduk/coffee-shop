@@ -1,5 +1,5 @@
-@import '../../../assets/styles/variables.scss';
-@import '../../../assets/styles/mixins.scss';
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
 
 .nav-container {
   width: 80%;
@@ -17,7 +17,7 @@
   margin-top: $regular-margin;
   width: 100%;
 }
-  
+
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -27,7 +27,7 @@
   margin: $small-margin 0;
   padding: 0;
 }
-  
+
 .nav-item {
   font-size: $small-font;
 }
@@ -39,7 +39,7 @@
 .coffee-footer {
   top: 0;
   color: $black-color;
-  
+
   .nav-container {
     justify-content: center;
     width: 100%;
