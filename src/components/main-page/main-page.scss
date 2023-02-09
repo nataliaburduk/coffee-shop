@@ -1,0 +1,12 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.MainPage {
+  text-align: center;
+  .about-section-container {
+    @include displayCenter;
+
+    height: 100vh;
+    width: 40% !important;
+  }
+}

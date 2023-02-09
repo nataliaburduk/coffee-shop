@@ -1,0 +1,47 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.nav-container {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.coffee-navbar {
+  @include displayCenter;
+
+  color: $white-color;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin-top: $regular-margin;
+  width: 100%;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  margin: $small-margin 0;
+  padding: 0;
+}
+
+.nav-item {
+  font-size: $small-font;
+}
+
+.coffee-logo {
+  height: 35px;
+}
+
+.coffee-footer {
+  top: 0;
+  color: $black-color;
+
+  .nav-container {
+    justify-content: center;
+    width: 100%;
+  }
+}

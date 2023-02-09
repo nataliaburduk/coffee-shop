@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.product-details {
+  text-align: center;
+
+  .about-section-container {
+    @include displayCenter;
+
+    margin: $large-margin auto;
+  }
+
+  .header::before {
+    background-image: url(../../assets/img/secondary_bg.jpg);
+  }
+}
+
+.spinner {
+  margin: calc($xsmal-margin/2);
+}
+
+.spinner-container {
+  @include displayCenter;
+
+  height: 15vh;
+}
+
+.spinner-grow-xsm {
+  --bs-spinner-width: 0.5rem !important;
+  --bs-spinner-height: 0.5rem !important;
+}

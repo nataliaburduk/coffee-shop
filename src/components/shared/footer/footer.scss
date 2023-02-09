@@ -1,0 +1,11 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.footer {
+  margin-top: $large-margin;
+  height: 15vh;
+}
+
+.footer-links {
+  color: $black-color !important;
+}

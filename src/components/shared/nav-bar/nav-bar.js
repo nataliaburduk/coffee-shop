@@ -1,18 +1,19 @@
 import { Component } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import './nav-bar.css'
+import "./nav-bar.scss";
 
 class Navbar extends Component {
   render() {
-    const {navBarType,coffeeLogo} = this.props;
+    const { navBarType, coffeeLogo } = this.props;
     const scrollToTop = () => {
-      window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
 
     return (
       <nav className={navBarType}>
-          <img src={coffeeLogo} alt='coffee-logo'className='coffee-logo'/>
+        <div className="nav-container">
+          <img src={coffeeLogo} alt="coffee-logo" className="coffee-logo" />
           <ul className="nav-menu">
             <li className="nav-item">
               <Link to="/" className="nav-link" onClick={scrollToTop}>
@@ -25,14 +26,19 @@ class Navbar extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/for-your-pleasure" className="nav-link" onClick={scrollToTop}>
+              <Link
+                to="/for-your-pleasure"
+                className="nav-link"
+                onClick={scrollToTop}
+              >
                 For your pleasure
               </Link>
             </li>
           </ul>
+        </div>
       </nav>
-    )
-  } 
+    );
+  }
 }
 
 export default Navbar;

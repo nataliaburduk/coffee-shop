@@ -1,0 +1,21 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.product-about {
+  text-align: left !important;
+  font-size: $small-font;
+}
+
+.products-price {
+  font-weight: 700;
+  font-size: $regular-font;
+
+  span {
+    font-size: $small-font;
+    font-weight: 400;
+  }
+}
+
+.product-img {
+  width: 100%;
+}

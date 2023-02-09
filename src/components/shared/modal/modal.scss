@@ -1,0 +1,48 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.modal-container {
+  font-family: "Merienda" !important;
+  font-size: $small-font !important;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: $xsmall-font;
+  border-bottom: none !important;
+}
+
+.modal-title {
+  font-weight: 200;
+  font-size: $small-font !important;
+}
+
+.form-placeholder {
+  @include boxShadow($white-color);
+
+  margin-bottom: $medium-margin;
+  font-size: $xsmall-font !important;
+  border-radius: 3px !important;
+  opacity: 0.8;
+}
+
+.form-placeholder:focus {
+  opacity: 1;
+}
+
+.modal-footer {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+.submit-btn {
+  @include displayCenter;
+  @include boxShadow($white-color);
+
+  color: $white-color !important;
+  font-size: $xsmall-font !important;
+  border-radius: 4px !important;
+  width: 15%;
+}

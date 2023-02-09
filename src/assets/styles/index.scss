@@ -1,0 +1,9 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+body {
+  margin: 0;
+  font-family: "Merienda" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

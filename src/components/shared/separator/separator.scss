@@ -1,0 +1,13 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.separator {
+  width: 240px;
+  border-top: 1px solid $black-color;
+}
+
+.separator-container {
+  @include displayCenter;
+
+  margin: $large-margin 0;
+}

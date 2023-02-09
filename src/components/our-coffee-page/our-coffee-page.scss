@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.our-coffee-page {
+  text-align: center;
+  .header::before {
+    background-image: url(../../assets/img/secondary_bg.jpg);
+  }
+  .about-section-container {
+    margin: $large-margin auto;
+  }
+}
+
+.filter-panel {
+  @include displayCenter;
+}

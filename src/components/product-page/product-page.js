@@ -6,11 +6,11 @@ import Footer from "../shared/footer/footer";
 import { Component } from "react";
 import { useParams } from "react-router-dom";
 
-import coffeeBeans from '../../assets/img/coffee-beans.svg'
-import './product-page.css';
+import coffeeBeans from "../../assets/img/coffee-beans.svg";
+import "./product-page.scss";
 
 function withParams(Component) {
-  return props => <Component {...props} params={useParams()} />;
+  return (props) => <Component {...props} params={useParams()} />;
 }
 
 class ProductPage extends Component {
@@ -18,50 +18,53 @@ class ProductPage extends Component {
     super(props);
     this.state = {
       loading: true,
-      productItem: {}
-    }
+      productItem: {},
+    };
   }
-  
+
   componentDidMount() {
     fetch(`http://localhost:3004/products/${this.props.params.id}`)
       .then((response) => {
-        console.log(response)
+        console.log(response);
         return response.json();
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ loading: false, productItem: myJson})
+        this.setState({ loading: false, productItem: myJson });
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e);
-        this.setState({...this.state, loading: true});
-    })
+        this.setState({ ...this.state, loading: true });
+      });
   }
 
   renderCardDetails() {
     if (this.state.loading) {
-      return (
-          <Loading/>
-      )
+      return <Loading />;
     } else {
-      const {country, price, img, description} = this.state.productItem;
+      const { country, price, img, description } = this.state.productItem;
       return (
-        <ProductAbout country={country} price={price} img={img} description={description}/>
-      )
+        <ProductAbout
+          country={country}
+          price={price}
+          img={img}
+          description={description}
+          className="product-about"
+        />
+      );
     }
   }
 
   render() {
-
     return (
       <div className="product-details">
-        <Header title='Our Coffee'/>
-        <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans}/>
+        <Header title="Our Coffee" />
+        <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans} />
         {this.renderCardDetails()}
-        <Footer/>
+        <Footer />
       </div>
-      )
-    }
+    );
+  }
 }
 
-export default withParams(ProductPage)
+export default withParams(ProductPage);

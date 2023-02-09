@@ -1,0 +1,28 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+
+.header {
+  @include displayCenter;
+
+  height: 40vh !important;
+  position: static;
+  overflow: auto;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+
+  &::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header-title {
+  color: $white-color;
+  font-size: $large-title-font;
+}

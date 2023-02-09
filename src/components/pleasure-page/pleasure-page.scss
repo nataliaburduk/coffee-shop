@@ -1,0 +1,14 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.for-your-pleasure-page {
+  text-align: center;
+
+  .header::before {
+    background-image: url(../../assets/img/third_bg.jpg);
+  }
+
+  .about-section-container {
+    margin: $large-margin auto;
+  }
+}
