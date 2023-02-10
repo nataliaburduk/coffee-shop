@@ -4,20 +4,19 @@
 .our-best-container {
   @include displayCenter;
 
-  height: 80vh;
-  position: static;
-  overflow: auto;
   transform: matrix(1, 0, 0, 1, 0, 0);
+  padding: $large-spacing $small-spacing;
 
   &::before {
-    content: "";
+    content: '';
     position: fixed;
     left: 0;
     right: 0;
     z-index: -1;
     display: block;
-    background-size: cover;
     background-image: url(../../../assets/img/our_best_bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
     filter: opacity(0.5);
     width: 100%;
     height: 100%;
@@ -25,9 +24,10 @@
 }
 
 .our-best-title {
-  font-size: $regular-title-font;
-  font-weight: 400;
+  @include font ($regular-title-font, 400);
+
   width: 70%;
+  padding: $small-spacing;
 }
 
 .our-best-cards .card-container {

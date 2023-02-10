@@ -2,17 +2,16 @@
 @import "../../../assets/styles/mixins.scss";
 
 .product-about {
+  @include font ($small-font, 400);
+
   text-align: left !important;
-  font-size: $small-font;
 }
 
 .products-price {
-  font-weight: 700;
-  font-size: $regular-font;
+  @include font ($regular-font, 700);
 
   span {
-    font-size: $small-font;
-    font-weight: 400;
+    @include font ($small-font, 400);
   }
 }
 

@@ -17,6 +17,7 @@ class ModalWindow extends Component {
           onHide={this.props.handleClose}
           aria-labelledby="contained-modal-title-vcenter"
           centered>
+            <div className="modal-wrapper">
           <Modal.Header className="modal-header" closeButton>
             <Modal.Title className="modal-title">
               {this.modalHeaderTitle()}
@@ -26,6 +27,7 @@ class ModalWindow extends Component {
           <Modal.Footer className="modal-footer">
             <Button className="submit-btn">{this.modalFooterBtn()}</Button>
           </Modal.Footer>
+            </div>
         </Modal>
       </>
     );

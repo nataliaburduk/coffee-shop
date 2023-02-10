@@ -8,13 +8,15 @@
 }
 
 .about-section-content {
-  margin-top: $regular-margin;
-  font-size: $small-font;
+  @include font($small-font, 400);
+
+  margin: $regular-spacing auto;
 }
 
 .about-section-title {
-  font-size: $regular-title-font;
-  margin-bottom: $regular-margin;
+  @include font($regular-title-font, 500);
+
+  margin-bottom: $regular-spacing;
 }
 
 .about-section-img {
@@ -23,6 +25,6 @@
   padding-right: 2rem !important;
 
   img {
-    @include boxShadow($white-color);
+    @include boxShadow($color-light);
   }
 }

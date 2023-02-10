@@ -7,7 +7,7 @@
   .about-section-container {
     @include displayCenter;
 
-    margin: $large-margin auto;
+    margin: $large-spacing auto;
   }
 
   .header::before {
@@ -16,7 +16,7 @@
 }
 
 .spinner {
-  margin: calc($xsmal-margin/2);
+  margin: calc($xsmall-spacing/2);
 }
 
 .spinner-container {

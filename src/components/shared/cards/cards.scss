@@ -2,12 +2,12 @@
 @import "../../../assets/styles/mixins.scss";
 
 .card-container {
-  @include boxShadow($white-color);
+  @include boxShadow($color-light);
 
-  margin: calc($regular-margin - 0.25rem) auto !important;
-  color: $black-color !important;
+  margin: $regular-spacing auto !important;
   width: 240px;
   height: 260px;
+  color: $color-dark !important;
 
   &:hover {
     opacity: 0.9;
@@ -15,32 +15,29 @@
 }
 
 .card-title {
-  font-size: $small-font;
-  margin-bottom: $xsmal-margin !important;
+  @include font($small-font, 400);
+
+  margin-bottom: $xsmall-spacing !important;
 }
 
 .card-price {
   @include cardDetails;
 
-  margin-bottom: $small-margin !important;
+  margin-bottom: $small-spacing !important;
 }
 
 .card-country {
   @include cardDetails;
 
-  margin-bottom: $xsmal-margin !important;
+  margin-bottom: $xsmall-spacing !important;
 }
 
 .card-img {
+  margin: $medium-plus-spacing auto;
   height: 130px !important;
   width: 151px !important;
-  margin: $medium-plus-margin auto;
 }
 
 .card-column {
   @include displayCenter;
-
-  a {
-    text-decoration: none;
-  }
 }

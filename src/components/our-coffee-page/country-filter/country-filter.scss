@@ -4,18 +4,18 @@
 .filter {
   @include displayCenter;
 
-  margin: 0 $small-margin !important;
+  margin: 0 $small-spacing !important;
 }
 
 .filter-button {
   @include displayCenter;
-  @include boxShadow($white-color !important);
+  @include boxShadow($color-light !important);
 
   font-size: $xsmall-font !important;
   width: 75px;
   height: 30px;
-  margin: calc($small-margin/10) !important;
-  color: $black-color !important;
+  margin: calc($small-spacing/10) !important;
+  color: $color-dark !important;
   opacity: 0.8;
 }
 
@@ -25,4 +25,5 @@
 
 .filter-container {
   @include displayCenter;
+  @include font ($regular-font, 400);
 }

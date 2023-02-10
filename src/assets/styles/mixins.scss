@@ -1,7 +1,26 @@
+@mixin font ($size, $weight, $height: calc($size * 1.2), $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+}
+
 @mixin displayCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin displayStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin displayGrid($template-columns: repeat(4, auto), $gap: 10px) {
+  display: grid;
+  grid-template-columns: $template-columns;
+  grid-gap: $gap;
 }
 
 @mixin boxShadow($background) {
@@ -11,8 +30,9 @@
 }
 
 @mixin cardDetails {
-  font-size: $small-font;
+  @include font ($small-font, 400);
+
   text-align: right;
   margin-top: 0;
-  margin-right: 2rem;
+  margin-right: 3.2rem;
 }

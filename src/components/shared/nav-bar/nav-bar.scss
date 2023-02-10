@@ -2,34 +2,28 @@
 @import "../../../assets/styles/mixins.scss";
 
 .nav-container {
+  @include font ($small-font, 400);
+  @include displayStart;
+
   width: 80%;
-  display: flex;
-  align-items: flex-start;
 }
 
 .coffee-navbar {
   @include displayCenter;
 
-  color: $white-color;
   position: absolute;
   top: 0;
   z-index: 1;
-  margin-top: $regular-margin;
+  margin-top: $regular-spacing;
   width: 100%;
+  color: $color-light;
 }
 
 .nav-menu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
-  list-style: none;
-  text-align: center;
-  margin: $small-margin 0;
-  padding: 0;
-}
+  @include displayGrid;
 
-.nav-item {
-  font-size: $small-font;
+  margin: $small-spacing 0;
+  padding: 0;
 }
 
 .coffee-logo {
@@ -37,11 +31,11 @@
 }
 
 .coffee-footer {
-  top: 0;
-  color: $black-color;
+  color: $color-dark;
 
   .nav-container {
-    justify-content: center;
+    @include displayCenter;
+    
     width: 100%;
   }
 }
