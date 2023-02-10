@@ -2,16 +2,16 @@
 @import "../../../assets/styles/mixins.scss";
 
 .modal-container {
-  font-family: "Merienda" !important;
-  font-size: $small-font !important;
+  @include font($small-font, 400);
 }
 
 .modal-header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-size: $xsmall-font;
   border-bottom: none !important;
+  padding: 1.5rem 1.5rem !important;
+  font-size:xx-small !important; 
 }
 
 .modal-title {
@@ -19,30 +19,68 @@
   font-size: $small-font !important;
 }
 
-.form-placeholder {
-  @include boxShadow($white-color);
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem !important;
+}
 
-  margin-bottom: $medium-margin;
-  font-size: $xsmall-font !important;
+.form-container {
+  width: 25rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center
+}
+
+.form-placeholder {
+  @include boxShadow($color-light);
+  
+  font-size: $small-font !important;
   border-radius: 3px !important;
   opacity: 0.8;
+  
+  &:first-child {
+    margin-bottom: $medium-spacing;
+  }
 }
 
 .form-placeholder:focus {
+  @include boxShadow($color-light);
+
   opacity: 1;
 }
 
 .modal-footer {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
   border-top: none !important;
   padding-top: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 1.5rem 1.5rem !important;
 }
 
 .submit-btn {
   @include displayCenter;
-  @include boxShadow($white-color);
-
-  color: $white-color !important;
+  @include boxShadow($color-light);
+  
+  color: $color-dark !important;
+  background-color: #dacdcd !important;
+  border: none;
   font-size: $xsmall-font !important;
   border-radius: 4px !important;
   width: 15%;
+
+  &:hover {
+    color: $color-light !important;
+    background-color: rosybrown !important;
+  }
+}
+
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }

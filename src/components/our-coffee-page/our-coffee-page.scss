@@ -3,11 +3,14 @@
 
 .our-coffee-page {
   text-align: center;
+
   .header::before {
+    content: '';
     background-image: url(../../assets/img/secondary_bg.jpg);
   }
+  
   .about-section-container {
-    margin: $large-margin auto;
+    margin: $large-spacing auto;
   }
 }
 

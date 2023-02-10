@@ -2,26 +2,22 @@
 @import "../../../assets/styles/mixins.scss";
 
 .search-container {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: center;
+  @include displayStart;
+  @include font ($regular-font, 400);
 }
 
 .search-blocks {
-  margin: $small-margin $small-margin;
+  margin: $small-spacing;
 }
 
 .search-input {
-  @include boxShadow($white-color);
+  @include boxShadow($color-light);
+  @include font ($xsmall-font, 400);
+
 
   width: 180px !important;
-  margin: $small-margin $small-margin;
-  padding: 0.5rem;
+  margin: $small-spacing;
+  padding: 1rem;
   border-radius: 4px;
   height: 30px;
-  font-size: $xsmall-font;
-  outline: none;
 }

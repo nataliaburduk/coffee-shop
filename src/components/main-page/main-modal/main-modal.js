@@ -13,7 +13,7 @@ class MainModal extends ModalWindow {
   modalBody() {
     return (
       <Form>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Group className="mb-4 form-container" controlId="exampleForm.ControlInput1">
           <Form.Control
             className="form-placeholder"
             type="name"

@@ -2,10 +2,9 @@
 @import "../../../assets/styles/mixins.scss";
 
 .footer {
-  margin-top: $large-margin;
-  height: 15vh;
+  padding: $regular-spacing 0 !important;
 }
 
 .footer-links {
-  color: $black-color !important;
+  color: $color-dark !important;
 }

@@ -4,11 +4,8 @@
 .main-screen {
   @include displayCenter;
 
-  color: $white-color;
-  font-weight: 300;
+  color: $color-light;
   height: 100vh;
-  position: static;
-  overflow: auto;
   transform: matrix(1, 0, 0, 1, 0, 0);
 
   &::before {
@@ -22,22 +19,25 @@
     height: 100%;
     background-image: url(../../../assets/img/main_bg_1.jpg);
   }
+
+  .main-title {
+    @include font ($large-title-font, 500);
+  }
+
+  .main-subtitle {
+    @include font ($regular-title-font, 400);
+  }
+  
+  .main-btn {
+    @include font ($small-font, 400);
+
+    color: $color-light !important;
+    border: 1px solid $color-light !important;
+    background: none !important;
+    border-radius: 3px !important;
+    width: 120px !important;
+    height: 30px !important;
+  }
 }
 
-.main-title {
-  font-size: $large-title-font;
-}
 
-.main-subtitle {
-  font-size: $regular-title-font;
-}
-
-.main-btn {
-  color: $white-color !important;
-  font-size: $small-font !important;
-  border: 1px solid $white-color !important;
-  background: none !important;
-  border-radius: 3px !important;
-  width: 120px !important;
-  height: 30px !important;
-}
