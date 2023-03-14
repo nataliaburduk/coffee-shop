@@ -1,31 +1,21 @@
-import { Component } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import MainModal from "../main-modal/main-modal";
 
 import beans from "../../../assets/img/beans-title.svg";
 import "./main-screen.scss";
 
-class MainScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-    };
+const MainScreen = () => {
+
+  const [show, setShow] = useState(false);
+
+  const showModal = (e) => {
+    setShow(true)
+  };
+
+  const hideModal = (e) => {
+    setShow(false)
   }
-
-  showModal = (e) => {
-    this.setState({
-      show: true,
-    });
-  };
-
-  hideModal = (e) => {
-    this.setState({
-      show: false,
-    });
-  };
-
-  render() {
     return (
       <Container fluid className="main-screen">
         <div className="main-title">
@@ -35,14 +25,13 @@ class MainScreen extends Component {
             We makes every day full of energy and taste
           </p>
           <p className="main-subtitle">Want to try our beans?</p>
-          <button className="main-btn" onClick={this.showModal}>
+          <button className="main-btn" onClick={() => showModal()}>
             More
           </button>
-          <MainModal show={this.state.show} handleClose={this.hideModal} />
+          <MainModal show={show} handleClose={() => hideModal()} />
         </div>
       </Container>
-    );
-  }
+    )
 }
 
 export default MainScreen;

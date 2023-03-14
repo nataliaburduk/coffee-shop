@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../shared/nav-bar/nav-bar";
 import Header from "../shared/header/header";
 import OurCoffeeAbout from "./our-coffee-about/our-coffee-about";
@@ -12,39 +12,28 @@ import Loading from "../shared/spinner/spinner";
 import coffeeBeans from "../../assets/img/coffee-beans.svg";
 import "./our-coffee-page.scss";
 
-class OurCoffeePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isFetching: true,
-      coffeeCardsData: [],
-      loadedCards: true,
-      input: "",
-      filter: "",
-    };
-  }
+const OurCoffeePage = () => {    
+  const [isFetching, setIsFetching] = useState(true);
+  const [coffeeCardsData, setCoffeeCardsData] = useState([]);
+  const [loadedCards, setLoadedCards] = useState(true);
+  const [input, setInput] = useState('');
+  const [filter, setFilter] = useState('')
 
-  componentDidMount() {
+  useEffect(() => {
     fetch("http://localhost:3004/products")
-      .then((response) => {
-        console.log(response);
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((myJson) => {
-        console.log(myJson);
-        this.setState({
-          isFetching: false,
-          coffeeCardsData: myJson,
-          loadedCards: false,
-        });
+        setIsFetching(false);
+        setCoffeeCardsData(myJson);
+        setLoadedCards(false)
       })
       .catch((e) => {
-        console.log(e);
-        this.setState({ ...this.state, isFetching: true, loadedCards: true });
-      });
-  }
+        setIsFetching(true);
+        setLoadedCards(true)
+      })
+  }, []) 
 
-  searchCoffee = (cards, input) => {
+  const searchCoffee = (cards, input) => {
     if (input.length === 0) {
       return cards;
     }
@@ -54,28 +43,26 @@ class OurCoffeePage extends Component {
         item.price.indexOf(input) > -1 ||
         item.title.toLowerCase().indexOf(input) > -1 ||
         item.country.toLowerCase().indexOf(input) > -1
-      );
-    });
-  };
-
-  renderCards() {
-    if (this.state.loadedCards) {
-      return <Loading />;
-    } else {
-      const { coffeeCardsData, input, filter } = this.state;
-      const visibleData = this.filterPost(
-        this.searchCoffee(coffeeCardsData, input),
-        filter
-      );
-      return <OurCoffeeCards coffeeCardsData={visibleData} />;
-    }
+      )
+    })
   }
 
-  onUpdateSearch = (input) => {
-    this.setState({ input: input.toLowerCase() });
-  };
+  const renderCards = () => {
+    if (loadedCards) {
+      return <Loading />;
+    }
+      const visibleData = filterPost(
+        searchCoffee(coffeeCardsData, input),
+        filter
+      )
+      return <OurCoffeeCards coffeeCardsData={visibleData} />;
+    }
 
-  filterPost = (cards, filter) => {
+  const onUpdateSearch = (input) => {
+    setInput(input.toLowerCase())
+  }
+
+  const filterPost = (cards, filter) => {
     if (filter) {
       return cards.filter((item) => item.country === filter);
     } else {
@@ -83,15 +70,13 @@ class OurCoffeePage extends Component {
     }
   };
 
-  onFilterSelect = (filter) => {
-    if (this.state.filter === filter) {
-      this.setState({ filter: "" });
+  const onFilterSelect = (fltr) => {
+    if (filter === fltr) {
+      setFilter('');
     } else {
-      this.setState({ filter });
+      setFilter(fltr);
     }
-  };
-
-  render() {
+  }
     return (
       <div className="our-coffee-page">
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans} />
@@ -99,18 +84,17 @@ class OurCoffeePage extends Component {
         <OurCoffeeAbout />
         <Separator />
         <div className="filter-panel">
-          <Search label="Looking for" onUpdateSearch={this.onUpdateSearch} />
+          <Search label="Looking for" onUpdateSearch={onUpdateSearch} />
           <CountryFilter
             label="Or filter"
-            filter={this.state.filter}
-            onFilterSelect={this.onFilterSelect}
+            filter={filter}
+            onFilterSelect={onFilterSelect}
           />
         </div>
-        {this.renderCards()}
+        {renderCards()}
         <Footer />
       </div>
-    );
-  }
-}
+    )
+    }
 
 export default OurCoffeePage;

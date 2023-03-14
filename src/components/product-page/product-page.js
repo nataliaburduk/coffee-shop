@@ -1,9 +1,9 @@
+import { useState, useEffect } from "react";
 import Header from "../shared/header/header";
 import Navbar from "../shared/nav-bar/nav-bar";
 import Loading from "../shared/spinner/spinner";
 import ProductAbout from "./product-about/product-about";
 import Footer from "../shared/footer/footer";
-import { Component } from "react";
 import { useParams } from "react-router-dom";
 
 import coffeeBeans from "../../assets/img/coffee-beans.svg";
@@ -13,36 +13,34 @@ function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;
 }
 
-class ProductPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true,
-      productItem: {},
-    };
-  }
+const ProductPage = (props) => {
 
-  componentDidMount() {
-    fetch(`http://localhost:3004/products/${this.props.params.id}`)
+  const [loading, setLoading] = useState(true);
+  const [productItem, setProductItem] = useState({})
+
+  useEffect(() => {
+    fetch(`http://localhost:3004/products/${props.params.id}`)
       .then((response) => {
         console.log(response);
         return response.json();
       })
       .then((myJson) => {
         console.log(myJson);
-        this.setState({ loading: false, productItem: myJson });
+        setLoading(false)
+        setProductItem(productItem => productItem=myJson)
       })
       .catch((e) => {
         console.log(e);
-        this.setState({ ...this.state, loading: true });
-      });
-  }
+        setLoading(true);
+        setProductItem();
+      })
+  }, [])
 
-  renderCardDetails() {
-    if (this.state.loading) {
+  const renderCardDetails = () => {
+    if (loading) {
       return <Loading />;
     } else {
-      const { country, price, img, description } = this.state.productItem;
+      const { country, price, img, description } = productItem;
       return (
         <ProductAbout
           country={country}
@@ -55,16 +53,14 @@ class ProductPage extends Component {
     }
   }
 
-  render() {
-    return (
-      <div className="product-details">
+  return (
+    <div className="product-details">
         <Header title="Our Coffee" />
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans} />
-        {this.renderCardDetails()}
-        <Footer />
-      </div>
-    );
-  }
+        {renderCardDetails()}
+        <Footer/>
+    </div>
+  )
 }
 
 export default withParams(ProductPage);

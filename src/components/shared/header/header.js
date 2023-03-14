@@ -1,16 +1,18 @@
-import { Component } from "react";
+import ErrorBoundary from "../../errorBoundary/errorBoundary";
 import Container from "react-bootstrap/Container";
 import "./header.scss";
 
-class Header extends Component {
-  render() {
-    const { title } = this.props;
-    return (
+const Header = (props) => {
+
+  const { title } = props;
+
+  return (
+    <ErrorBoundary>
       <Container fluid className="header">
         <div className="header-title">{title}</div>
       </Container>
-    );
-  }
+    </ErrorBoundary>
+  )
 }
 
 export default Header;

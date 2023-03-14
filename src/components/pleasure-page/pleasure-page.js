@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../shared/nav-bar/nav-bar";
 import Header from "../shared/header/header";
 import PleasureAbout from "./pleasure-about/pleasure-about";
@@ -10,52 +10,41 @@ import Loading from "../shared/spinner/spinner";
 import coffeeBeans from "../../assets/img/coffee-beans.svg";
 import "./pleasure-page.scss";
 
-class PleasurePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      coffeeCardsData: [],
-      isFetching: true,
-    };
-  }
+const PleasurePage = () => {
+  
+  const [isFetching, setIsFetching] = useState(true);
+  const [coffeeCardsData, setCoffeeCardsData] = useState([]);
 
-  componentDidMount() {
+  useEffect(() => {
     fetch("http://localhost:3004/products")
-      .then((response) => {
-        console.log(response);
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((myJson) => {
-        console.log(myJson);
-        this.setState({ coffeeCardsData: myJson, isFetching: false });
+          setIsFetching(false);
+          setCoffeeCardsData(myJson)
       })
       .catch((e) => {
-        console.log(e);
-        this.setState({ ...this.state, isFetching: true });
-      });
-  }
+        setIsFetching(true)
+      })
+  }, []) 
 
-  renderCards() {
-    if (this.state.isFetching) {
+  const renderCards = () => {
+    if (isFetching) {
       return <Loading />;
     } else {
-      const { coffeeCardsData } = this.state;
       return <OurCoffeeCards coffeeCardsData={coffeeCardsData} />;
     }
   }
 
-  render() {
     return (
       <div className="for-your-pleasure-page">
         <Navbar navBarType="coffee-navbar" coffeeLogo={coffeeBeans} />
         <Header title="For Your Pleasure" />
         <PleasureAbout />
         <Separator />
-        {this.renderCards()}
+        {renderCards()}
         <Footer />
       </div>
-    );
-  }
+    )
 }
 
 export default PleasurePage;
