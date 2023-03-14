@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import CoffeeLogo from "../../coffee-logo/coffee-logo";
 
 import "./nav-bar.scss";
 
@@ -13,10 +14,10 @@ class Navbar extends Component {
     return (
       <nav className={navBarType}>
         <div className="nav-container">
-          <img src={coffeeLogo} alt="coffee-logo" className="coffee-logo" />
           <ul className="nav-menu">
             <li className="nav-item">
               <Link to="/" className="nav-link" onClick={scrollToTop}>
+                <CoffeeLogo />
                 Coffee house
               </Link>
             </li>

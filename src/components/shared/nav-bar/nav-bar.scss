@@ -4,6 +4,7 @@
 .nav-container {
   @include font ($small-font, 400);
   @include displayStart;
+  align-items:center;
 
   width: 80%;
 }
@@ -26,6 +27,12 @@
   padding: 0;
 }
 
+.nav-link {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
 .coffee-logo {
   height: 35px;
 }
@@ -35,7 +42,8 @@
 
   .nav-container {
     @include displayCenter;
-    
+
     width: 100%;
   }
 }
+

@@ -17,10 +17,11 @@
   justify-content: flex-start;
 }
 
-@mixin displayGrid($template-columns: repeat(4, auto), $gap: 10px) {
+@mixin displayGrid($template-columns: repeat(4, auto), $gap: 1.2rem) {
   display: grid;
   grid-template-columns: $template-columns;
   grid-gap: $gap;
+  align-items:center;
 }
 
 @mixin boxShadow($background) {
